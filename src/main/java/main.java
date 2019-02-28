@@ -27,7 +27,7 @@ public class main {
             QueryResult result = twitter.search(query);
             System.out.println();
             StringBuilder stringBuilder = new StringBuilder();
-           // List<String> resultat = new
+
             for (Status status : result.getTweets()) { //we print his content next
                 
                 stringBuilder.append(status.getCreatedAt())
@@ -42,18 +42,19 @@ public class main {
                         .append("\n");
                         
             }
-            printStringToCsv(stringBuilder.toString());
+            String[] resultat = stringBuilder.toString().split(";");
+                    printStringToCsv(resultat);
         } catch (twitter4j.TwitterException exc) {
             exc.printStackTrace();
         }
 
     }
 
-    private static void printStringToCsv(String data){
+    private static void printStringToCsv(String[] data){
         try {
         CSVWriter writer = new CSVWriter(new FileWriter("/file.csv"));
 
-        writer.writeAll();
+        //writer.writeAll("salut;salut",);
         }catch(IOException exc){
             exc.printStackTrace();
         }

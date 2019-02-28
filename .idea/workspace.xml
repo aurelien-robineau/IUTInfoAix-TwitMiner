@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="42c80b2d-9d15-4b80-92e6-c8898d9c937b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="479">
+              <caret line="44" column="65" lean-forward="true" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,7 +128,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551370392394" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551371183625" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -180,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551358947139</updated>
-      <workItem from="1551358948456" duration="10172000" />
+      <workItem from="1551358948456" duration="10772000" />
     </task>
     <task id="LOCAL-00001" summary="first query working">
       <created>1551365769767</created>
@@ -189,11 +188,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551365769767</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="csvwriter">
+      <created>1551370496884</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551370496884</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10172000" />
+    <option name="totallyTimeSpent" value="10772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="26" width="1690" height="1005" extended-state="6" />
@@ -235,7 +241,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first query working" />
-    <option name="LAST_COMMIT_MESSAGE" value="first query working" />
+    <MESSAGE value="csvwriter" />
+    <option name="LAST_COMMIT_MESSAGE" value="csvwriter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.attach_pid7272">
@@ -260,8 +267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="479">
+          <caret line="44" column="65" lean-forward="true" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
