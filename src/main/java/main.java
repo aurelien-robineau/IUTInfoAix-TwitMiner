@@ -1,6 +1,10 @@
+import com.opencsv.CSVWriter;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 
 public class main {
@@ -19,14 +23,40 @@ public class main {
 
 
             // The factory instance is re-useable and thread safe.
-            Query query = new Query("@random"); // we search for the user "random"
+            Query query = new Query("#datamining");
             QueryResult result = twitter.search(query);
             System.out.println();
+            StringBuilder stringBuilder = new StringBuilder();
+           // List<String> resultat = new
             for (Status status : result.getTweets()) { //we print his content next
-                System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+                
+                stringBuilder.append(status.getCreatedAt())
+                        .append(";")
+                        .append(status.getUser().getScreenName())
+                        .append(";")
+                        .append(status.getFavoriteCount())
+                        .append(";")
+                        .append(status.isRetweet())
+                        .append(";")
+                        .append(status.getText())
+                        .append("\n");
+                        
             }
+            printStringToCsv(stringBuilder.toString());
         } catch (twitter4j.TwitterException exc) {
             exc.printStackTrace();
         }
+
+    }
+
+    private static void printStringToCsv(String data){
+        try {
+        CSVWriter writer = new CSVWriter(new FileWriter("/file.csv"));
+
+        writer.writeAll();
+        }catch(IOException exc){
+            exc.printStackTrace();
+        }
+
     }
 }
