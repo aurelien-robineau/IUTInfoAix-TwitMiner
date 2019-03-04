@@ -1,19 +1,27 @@
+import FileManagement.CSVToTransConverter;
 import com.opencsv.CSVWriter;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 public class main {
     public static CSVWriter writer ;
 
 
     public static void main(String[] args) {
+
+        /* --- CSV Test --- */
+
+        CSVToTransConverter converter = new CSVToTransConverter();
+        String trans = converter.convertToTrans("./src/main/java/FileManagement/test.csv");
+        System.out.println(trans);
+
+        /* ---------------- */
+
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
