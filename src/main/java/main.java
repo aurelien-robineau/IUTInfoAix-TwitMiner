@@ -5,9 +5,13 @@ import twitter4j.conf.ConfigurationBuilder;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class main {
+    public static CSVWriter writer ;
+
 
     public static void main(String[] args) {
         // The factory instance is re-useable and thread safe.
@@ -19,6 +23,14 @@ public class main {
                 .setOAuthAccessTokenSecret("hbarwoRCYsmRKVmzWmv5hTjaoBdyemF7BGsAyxdnTlAQm");
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
+
+        //initiliazing the writer
+        try{
+             writer = new CSVWriter(new FileWriter("../file.txt"),';');
+        }catch(IOException exc){
+            exc.printStackTrace();
+        }
+
         try {
 
 
@@ -27,10 +39,10 @@ public class main {
             QueryResult result = twitter.search(query);
             System.out.println();
             StringBuilder stringBuilder = new StringBuilder();
-
-            for (Status status : result.getTweets()) { //we print his content next
-                
-                stringBuilder.append(status.getCreatedAt())
+            Collection<String[]> resultat = new ArrayList<String[]>();
+            //we print all the results in a file
+            for (Status status : result.getTweets()) {
+                stringBuilder.append(status.getCreatedAt().toString())
                         .append(";")
                         .append(status.getUser().getScreenName())
                         .append(";")
@@ -38,26 +50,30 @@ public class main {
                         .append(";")
                         .append(status.isRetweet())
                         .append(";")
-                        .append(status.getText())
-                        .append("\n");
-                        
+                        .append(status.getText());
+                resultat.add(stringBuilder.toString().split("[; ]"));
+
             }
-            String[] resultat = stringBuilder.toString().split(";");
-                    printStringToCsv(resultat);
+            printStringToCsv(resultat);
+
         } catch (twitter4j.TwitterException exc) {
             exc.printStackTrace();
         }
 
     }
 
-    private static void printStringToCsv(String[] data){
-        try {
-        CSVWriter writer = new CSVWriter(new FileWriter("/file.csv"));
 
-        //writer.writeAll("salut;salut",);
+    private static void printStringToCsv(Collection<String[]> tweetCollection){
+        try {
+            for(String[] tweet : tweetCollection){
+                writer.writeNext(tweet);
+
+            }
+            writer.close();
+
         }catch(IOException exc){
             exc.printStackTrace();
         }
-
     }
+
 }
