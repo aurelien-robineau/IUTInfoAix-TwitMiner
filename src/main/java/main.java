@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 public class main {
     public static CSVWriter writer ;
@@ -27,6 +28,17 @@ public class main {
         String csv = outConverter.convertToCSV("./src/main/java/FileManagement/test.out");
         System.out.println(csv);
         */
+        try{
+            Map<ArrayList<Integer>,Float> outMap = Extracteur.readData();
+            System.out.println(outMap);
+        }catch (IOException e){
+            e.printStackTrace();
+
+        }
+
+
+
+
     }
 
     private static void getData(){

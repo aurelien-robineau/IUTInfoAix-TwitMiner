@@ -10,11 +10,8 @@ public class Extracteur {
 
     public static Map<ArrayList<Integer>,Float> readData() throws IOException {
 
-        int count = 0;
         String file = "./src/main/java/csv/test.txt";
         Map<ArrayList<Integer>,Float> content = new HashMap<ArrayList<Integer>,Float>();
-        ArrayList<ArrayList<Integer>> pattern = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Float> frequencies = new ArrayList<Float>();
 
 
         String[] stringContent;
@@ -30,26 +27,12 @@ public class Extracteur {
                 for(int i =0; i<stringContent.length-1; ++i){
                     temp.add( Integer.parseInt(stringContent[i]) );
                 }
-                frequencies.add( Float.parseFloat(stringContent[stringContent.length-1]) );
-                pattern.add(temp);
-
+                content.put(temp,Float.parseFloat(stringContent[stringContent.length-1]));
             }
-            for( int i=0; i<frequencies.size() ; ++i){
-                content.put(pattern.get(i),frequencies.get(i)/nbLignes);
-            }
-
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
-
-
-
-
-
-
 
         return content;
     }
