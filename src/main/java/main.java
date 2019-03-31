@@ -13,17 +13,20 @@ public class main {
 
 
     public static void main(String[] args) {
+        
+        /*
+        // CSV Test
 
-        /* --- CSV Test --- */
+        CSVToTransConverter csvConverter = new CSVToTransConverter();
+        String trans = csvConverter.convertToTrans("./src/main/java/FileManagement/test.csv");
+        System.out.println(trans);
 
-       // CSVToTransConverter converter = new CSVToTransConverter();
-        //String trans = converter.convertToTrans("./src/main/java/FileManagement/test.csv");
-        //System.out.println(trans);
+        // Out Test
 
-        /* ---------------- */
-
-
-
+        OutToCSVConverter outConverter = new OutToCSVConverter();
+        String csv = outConverter.convertToCSV("./src/main/java/FileManagement/test.out");
+        System.out.println(csv);
+        */
     }
 
     private static void getData(){
