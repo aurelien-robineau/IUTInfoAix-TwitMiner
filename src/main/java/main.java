@@ -16,12 +16,17 @@ public class main {
 
         /* --- CSV Test --- */
 
-        CSVToTransConverter converter = new CSVToTransConverter();
-        String trans = converter.convertToTrans("./src/main/java/FileManagement/test.csv");
-        System.out.println(trans);
+       // CSVToTransConverter converter = new CSVToTransConverter();
+        //String trans = converter.convertToTrans("./src/main/java/FileManagement/test.csv");
+        //System.out.println(trans);
 
         /* ---------------- */
 
+
+
+    }
+
+    private static void getData(){
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -34,7 +39,7 @@ public class main {
 
         //initiliazing the writer
         try{
-             writer = new CSVWriter(new FileWriter("../file.txt"),';');
+            writer = new CSVWriter(new FileWriter("file.txt"),';');
         }catch(IOException exc){
             exc.printStackTrace();
         }
@@ -67,7 +72,6 @@ public class main {
         } catch (twitter4j.TwitterException exc) {
             exc.printStackTrace();
         }
-
     }
 
 
@@ -75,7 +79,6 @@ public class main {
         try {
             for(String[] tweet : tweetCollection){
                 writer.writeNext(tweet);
-
             }
             writer.close();
 
