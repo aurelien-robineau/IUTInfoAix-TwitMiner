@@ -1,12 +1,22 @@
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Extracteur {
+    public static Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> confs =
+            new HashMap<HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float>();
 
-
-
+    /**
+     * read data from the output of apriori as a csv
+     * @param nbElements
+     * @return
+     * @throws IOException
+     */
     public static Map<ArrayList<Integer>,Float> readData(int nbElements) throws IOException {
 
         String file = "./src/main/java/csv/test.txt";
@@ -66,55 +76,58 @@ public class Extracteur {
      */
     public static ArrayList<ArrayList<Integer>> combinationFinder(ArrayList<Integer> data){
         ArrayList<ArrayList<Integer>> combinations = new ArrayList<ArrayList<Integer>>();
-        //Pour phase
-        for(int iterationNb =0;iterationNb<data.size(); ++iterationNb){
-
-            // pour chaque item
-            for( int itemNb =0; itemNb<data.size()-iterationNb; ++itemNb) {
-                ArrayList<Integer>  sousCombinaison = new  ArrayList<Integer>();
-
-                //préfixe
-                for(int i =itemNb; i<iterationNb+1; ++i) {
-                    sousCombinaison.add(data.get(i));
-
-                }
-                System.out.println(sousCombinaison);
-                combinations.add(sousCombinaison);
 
 
-                /*
-
-                // jusqu'à nb item par combinaison
-                for( int i =0; i< iterationNb+1; ++i){
-
-
-
-                    ArrayList<Integer>  sousCombinaison = new  ArrayList<Integer>();
-                    sousCombinaison.add(data.get(itemNb));
-                    //pour chaque item suivant
-                    for(int j= itemNb+1; j<data.size(); ++j){
-                        sousCombinaison.add(data.get(j));
-                        System.out.println(sousCombinaison);
-
-                    }
-                    combinations.add(sousCombinaison);
-
-
-
-                }
-*/
-            }
-
+        Set<Set<Integer>> result = Sets.powerSet(Sets.newHashSet(data));
+        for(Set<Integer> item : result){
+            combinations.add(Lists.newArrayList(item));
         }
-
-
-
-
-
+        //we don't want the last value because it equals data
+        combinations.remove(combinations.size()-1);
+        //we don't want the null value the Sets.powerSet gives us
+        combinations.remove(0);
 
         return combinations;
     }
 
+    /**
+     *
+     * @param motifs
+     * @return
+     */
+    private static Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> conf(Map<ArrayList<Integer>,Float> motifs) {
+
+        Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> confs = new HashMap<HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float>();
+
+        ArrayList<Integer> biggestKey = new ArrayList<Integer>();
+        for (Map.Entry <ArrayList<Integer>, Float> entry : motifs.entrySet()) {
+            if(entry.getKey().size() > biggestKey.size()) {
+                biggestKey = entry.getKey();
+            }
+        }
+
+        for (Map.Entry <ArrayList<Integer>, Float> entry : motifs.entrySet()) {
+            float conf = motifs.get(biggestKey) / entry.getValue();
+
+            HashMap<ArrayList<Integer>, ArrayList<Integer>> key = new HashMap<ArrayList<Integer>, ArrayList<Integer>>();
+            key.put(entry.getKey(), biggestKey);
+            confs.put(key, conf);
+        }
+
+        // AFFICHAGE
+        for (Map.Entry <HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> entry : confs.entrySet()) {
+            HashMap<ArrayList<Integer>, ArrayList<Integer>> key = entry.getKey();
+            for (Map.Entry <ArrayList<Integer>, ArrayList<Integer>> assos: key.entrySet()) {
+                System.out.print(assos.getKey());
+                System.out.print(" -> ");
+                System.out.print(assos.getValue());
+            }
+            System.out.print(" = ");
+            System.out.println(entry.getValue());
+        }
+
+        return confs;
+    }
 
 
 }

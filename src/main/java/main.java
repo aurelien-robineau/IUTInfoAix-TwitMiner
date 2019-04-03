@@ -28,13 +28,17 @@ public class main {
         String csv = outConverter.convertToCSV("./src/main/java/FileManagement/test.out");
         System.out.println(csv);
         */
-        try{
-            Map<ArrayList<Integer>,Float> outMap = Extracteur.readData();
-            System.out.println(outMap);
-        }catch (IOException e){
-            e.printStackTrace();
 
-        }
+
+            ArrayList<Integer> test = new ArrayList<Integer>();
+            test.add(1);
+        test.add(2);
+        test.add(3);
+        test.add(4);
+
+        System.out.println(Extracteur.combinationFinder(test));
+
+
 
 
 
