@@ -28,9 +28,7 @@ public class Extracteur {
 
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
-            Integer nbLignes = 0;
             while ((line = br.readLine()) != null) {
-                ++nbLignes;
                 ArrayList<Integer> temp = new ArrayList<Integer>();
                 stringContent = line.split(";");
                 for(int i =0; i<stringContent.length-1; ++i){
@@ -50,8 +48,21 @@ public class Extracteur {
         //for each element in the content map
         for(Map.Entry<ArrayList<Integer>,Float> entry : content.entrySet()) {
             content.put(entry.getKey(),entry.getValue()/nbElements);
+        }
+
+        //creating rules
+        for(Map.Entry<ArrayList<Integer>,Float> entry : content.entrySet()) {
+            //if there can't be any subunit it's not interresting
+            if (entry.getKey().size() < 1) continue;
+
+            //we search patterns for interresting rules
+            for (ArrayList<Integer> combination : combinationFinder(entry.getKey())) {
+
+            }
+
 
         }
+
 
         return content;
     }
