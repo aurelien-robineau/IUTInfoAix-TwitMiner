@@ -1,6 +1,5 @@
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,19 +7,41 @@ import java.util.Map;
 import java.util.Set;
 
 public class Extracteur {
-    public static Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> confs =
-            new HashMap<HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float>();
+    //properties
+    private Map< Pair, Float> confs =new HashMap<Pair, Float>();
+    private Float minConf =0F;
+    private Map<ArrayList<Integer>,Float> freqPattern  = new HashMap<ArrayList<Integer>, Float>();
+    private static Extracteur instance ;
 
+    //getters an setters
+    public Float getMinConf() {
+        return minConf;
+    }
+
+    public void setMinConf(Float minConf) {
+        this.minConf = minConf;
+    }
+    //constructor
+    private Extracteur() {
+
+    }
+    //singleton getter
+    public static   Extracteur getInstance(){
+        if(instance == null){
+            return new Extracteur();
+        }else{
+            return instance;
+        }
+    }
     /**
      * read data from the output of apriori as a csv
      * @param nbElements
      * @return
      * @throws IOException
      */
-    public static Map<ArrayList<Integer>,Float> readData(int nbElements) throws IOException {
+    public void readData(int nbElements) throws IOException {
 
         String file = "./src/main/java/csv/test.txt";
-        Map<ArrayList<Integer>,Float> content = new HashMap<ArrayList<Integer>,Float>();
 
 
         String[] stringContent;
@@ -39,53 +60,45 @@ public class Extracteur {
                     }
 
                 }
-                content.put(temp,Float.parseFloat(stringContent[stringContent.length-1]));
+                freqPattern.put(temp,Float.parseFloat(stringContent[stringContent.length-1]));
             }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         //for each element in the content map
-        for(Map.Entry<ArrayList<Integer>,Float> entry : content.entrySet()) {
-            content.put(entry.getKey(),entry.getValue()/nbElements);
+        for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
+            freqPattern.put(entry.getKey(),entry.getValue()/nbElements);
         }
 
         //creating rules
-        for(Map.Entry<ArrayList<Integer>,Float> entry : content.entrySet()) {
+        for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
             //if there can't be any subunit it's not interresting
             if (entry.getKey().size() < 1) continue;
 
             //we search patterns for interresting rules
             for (ArrayList<Integer> combination : combinationFinder(entry.getKey())) {
+                if(freqPattern.get(combination) != null){
+                    Float conf = entry.getValue()/freqPattern.get(combination);
 
+                    if(conf >=minConf){
+                        confs.put(new Pair(entry.getKey(),combination),conf);
+                    }
+                }else{
+                    System.out.println(combination +" does not exist");
+                }
             }
 
-
         }
-
-
-        return content;
     }
 
-    public void patternFinder(Map<ArrayList<Integer>,Float> data){
-
-        for(Map.Entry<ArrayList<Integer>,Float>  row: data.entrySet()) {
-            row.getKey();
-            row.getValue();
-
-
-        }
-
-
-
-    }
 
     /**
      * find all combinations with the given numbers
      * @param data
      * @return the combinations
      */
-    public static ArrayList<ArrayList<Integer>> combinationFinder(ArrayList<Integer> data){
+    private ArrayList<ArrayList<Integer>> combinationFinder(ArrayList<Integer> data){
         ArrayList<ArrayList<Integer>> combinations = new ArrayList<ArrayList<Integer>>();
 
 
@@ -101,13 +114,32 @@ public class Extracteur {
         return combinations;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append("conf :");
+        s.append(confs);
+        s.append("\n\n freqPatterns :");
+        s.append(freqPattern);
+        s.append("\n\nmin conf :");
+        s.append(minConf);
+
+        return s.toString();
+
+
+    }
+
+
+    /*
     /**
-     *
+     * remplie conf
      * @param motifs
      * @return
      */
-    private static Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> conf(Map<ArrayList<Integer>,Float> motifs) {
+    /*
+    private static Map< Pair<ArrayList<Integer>, ArrayList<Integer>>, Float> conf(Map<ArrayList<Integer>,Float> motifs) {
 
+        Pair<ArrayList<Integer>, ArrayList<Integer>> test ;
         Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> confs = new HashMap<HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float>();
 
         ArrayList<Integer> biggestKey = new ArrayList<Integer>();
@@ -139,7 +171,7 @@ public class Extracteur {
 
         return confs;
     }
-
+*/
 
 }
 

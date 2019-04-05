@@ -29,14 +29,13 @@ public class main {
         System.out.println(csv);
         */
 
+        try{
+            Extracteur e =Extracteur.getInstance();
+            e.readData(8);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-            ArrayList<Integer> test = new ArrayList<Integer>();
-            test.add(1);
-        test.add(2);
-        test.add(3);
-        test.add(4);
-
-        System.out.println(Extracteur.combinationFinder(test));
 
 
 
