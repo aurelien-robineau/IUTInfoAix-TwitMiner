@@ -10,13 +10,18 @@ import java.util.Collection;
 import java.util.Map;
 
 public class main {
-    public static CSVWriter writer ;
+    private static final int MAX_QUERIES			= 100;
+    private static final int TWEETS_PER_QUERY		= 100;
+    private static final String SEARCH_TERM			= "canard";
+    private static CSVWriter writer ;
 
 
     public static void main(String[] args) {
-        
-        getData("./src/main/java/csv/tweets.txt");
-        CSVToTransConverter.convertToTrans("./src/main/java/csv/tweetsTrans.txt");
+        String storingFile ="./src/main/java/csv/tweets.txt";
+        getData(storingFile);
+        //System.out.println(CSVToTransConverter.convertToTrans(storingFile));
+        //call apriori here
+
 
         try{
             Extracteur e =Extracteur.getInstance();
@@ -44,53 +49,94 @@ public class main {
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
 
-        //initiliazing the writer
-        try{
-            writer = new CSVWriter(new FileWriter(fileToSaveIn),';');
-        }catch(IOException exc){
-            exc.printStackTrace();
-        }
 
+        long maxID = -1;
+        int totalTweets =0;
+        Collection<String[]> resultat = new ArrayList<String[]>();
         try {
+            //initiliazing the writer
+            writer = new CSVWriter(new FileWriter(fileToSaveIn),';');
+
+            //	This returns all the various rate limits in effect for us with the Twitter API
+            Map<String, RateLimitStatus> rateLimitStatus = twitter.getRateLimitStatus("search");
+
+            //	This finds the rate limit specifically for doing the search API call we use in this program
+            RateLimitStatus searchTweetsRateLimit = rateLimitStatus.get("/search/tweets");
+
 
 
             // The factory instance is re-useable and thread safe.
-            Query query = new Query("#datamining");
-            QueryResult result = twitter.search(query);
-            System.out.println();
-            StringBuilder stringBuilder = new StringBuilder();
-            Collection<String[]> resultat = new ArrayList<String[]>();
-            //we print all the results in a file
-            for (Status status : result.getTweets()) {
-                stringBuilder.append(status.getCreatedAt().toString())
-                        .append(";")
-                        .append(status.getUser().getScreenName())
-                        .append(";")
-                        .append(status.getFavoriteCount())
-                        .append(";")
-                        .append(status.isRetweet())
-                        .append(";")
-                        .append(status.getText());
-                resultat.add(stringBuilder.toString().split("[; ]"));
 
+
+            for (int queryNumber = 0; queryNumber < MAX_QUERIES; queryNumber++) {
+                System.out.printf("\n\n!!! Starting loop %d\n\n", queryNumber);
+
+
+                if (searchTweetsRateLimit.getRemaining() == 0) {
+                    //	Yes we do, unfortunately ...
+                    System.out.printf("!!! Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
+
+                    Thread.sleep((searchTweetsRateLimit.getSecondsUntilReset() + 2) * 1000l);
+                }
+
+                Query query = new Query(SEARCH_TERM);
+                query.setCount(TWEETS_PER_QUERY);
+                query.setLang("fr");
+
+                if (maxID != -1){
+                    query.setMaxId(maxID - 1);
+                }
+
+
+                /////// recherche et traitement résultat ///////////
+                QueryResult result = twitter.search(query);
+
+                StringBuilder stringBuilder = new StringBuilder();
+
+
+                //we print all the results in a file
+                for (Status status : result.getTweets()) {
+                    ++totalTweets;
+                    if (maxID == -1 || status.getId() < maxID)
+                    {
+                        maxID = status.getId();
+                    }
+                    stringBuilder.append(status.getCreatedAt().toString())
+                            .append(";")
+                            .append(status.getUser().getScreenName())
+                            .append(";")
+                            .append(status.getFavoriteCount())
+                            .append(";")
+                            .append(status.isRetweet())
+                            .append(";")
+                            .append(status.getText());
+                    resultat.add(stringBuilder.toString().split("[; ]"));
+
+
+                    searchTweetsRateLimit = result.getRateLimitStatus();
+                }
+
+
+
+                /////// fin recherche et traitement résultat ///////////
             }
+            System.out.println("j'ai lu "+ totalTweets +" tweets");
             printStringToCsv(resultat);
-
-        } catch (twitter4j.TwitterException exc) {
+        } catch(Exception exc){
             exc.printStackTrace();
         }
+
     }
+
 
 
     private static void printStringToCsv(Collection<String[]> tweetCollection){
 
         try {
             for(String[] tweet : tweetCollection){
-                System.out.println("print to csv");
                 writer.writeNext(tweet);
             }
             writer.close();
-
         }catch(IOException exc){
             exc.printStackTrace();
         }

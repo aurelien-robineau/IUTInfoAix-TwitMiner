@@ -1,0 +1,5 @@
+Todo:
+utiliser le code apriori du prof
+
+
+faire l'interface graphique
