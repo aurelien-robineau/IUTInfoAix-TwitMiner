@@ -15,19 +15,8 @@ public class main {
 
     public static void main(String[] args) {
         
-        /*
-        // CSV Test
-
-        CSVToTransConverter csvConverter = new CSVToTransConverter();
-        String trans = csvConverter.convertToTrans("./src/main/java/FileManagement/test.csv");
-        System.out.println(trans);
-
-        // Out Test
-
-        OutToCSVConverter outConverter = new OutToCSVConverter();
-        String csv = outConverter.convertToCSV("./src/main/java/FileManagement/test.out");
-        System.out.println(csv);
-        */
+        getData("./src/main/java/csv/tweets.txt");
+        CSVToTransConverter.convertToTrans("./src/main/java/csv/tweetsTrans.txt");
 
         try{
             Extracteur e =Extracteur.getInstance();
@@ -44,7 +33,7 @@ public class main {
 
     }
 
-    private static void getData(){
+    private static void getData(String fileToSaveIn){
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -57,7 +46,7 @@ public class main {
 
         //initiliazing the writer
         try{
-            writer = new CSVWriter(new FileWriter("file.txt"),';');
+            writer = new CSVWriter(new FileWriter(fileToSaveIn),';');
         }catch(IOException exc){
             exc.printStackTrace();
         }
@@ -94,8 +83,10 @@ public class main {
 
 
     private static void printStringToCsv(Collection<String[]> tweetCollection){
+
         try {
             for(String[] tweet : tweetCollection){
+                System.out.println("print to csv");
                 writer.writeNext(tweet);
             }
             writer.close();

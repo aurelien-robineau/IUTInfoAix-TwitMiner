@@ -10,7 +10,7 @@ public class CSVToTransConverter {
      * Convert a .csv file into a .trans file.
      * @return .trans file
      */
-    public String convertToTrans(String csvFile) {
+    public static String convertToTrans(String csvFile) {
         CSVReader reader = new CSVReader(";");
         ArrayList<String[]> splitCSV = reader.splitCSV(csvFile);
 
@@ -36,7 +36,7 @@ public class CSVToTransConverter {
         return splitTransToString(splitTrans);
     }
 
-    public void makeTransFile(String transFile, String destFile) {
+    private static void makeTransFile(String transFile, String destFile) {
         try {
             FileWriter writer = new FileWriter(destFile);
             writer.write(transFile);
@@ -45,7 +45,7 @@ public class CSVToTransConverter {
         }
     }
 
-    private String splitTransToString(ArrayList<ArrayList<Integer>> splitTrans) {
+    private static String splitTransToString(ArrayList<ArrayList<Integer>> splitTrans) {
         StringBuilder fileStr = new StringBuilder();
         for (ArrayList<Integer> line: splitTrans) {
             for (Integer word: line) {
