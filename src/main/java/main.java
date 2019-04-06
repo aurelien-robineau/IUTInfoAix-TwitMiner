@@ -3,8 +3,10 @@ import com.opencsv.CSVWriter;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
@@ -12,33 +14,40 @@ import java.util.Map;
 public class main {
     private static final int MAX_QUERIES			= 100;
     private static final int TWEETS_PER_QUERY		= 100;
-    private static final String SEARCH_TERM			= "canard";
+    private static final String SEARCH_TERM			= "esport";
     private static CSVWriter writer ;
 
 
     public static void main(String[] args) {
-        String storingFile ="./src/main/java/csv/tweets.txt";
-        getData(storingFile);
-        //System.out.println(CSVToTransConverter.convertToTrans(storingFile));
+
+        /////// undo comments if you want fresh data
+        /*
+        String storingFile ="./src/main/resources/CSV/tweets.csv";
+
+        Collection<String[]> tweets = getData(storingFile);
+
+        printStringToCsv(tweets);
+
+        System.out.println("/!\\ Cleaning data ...");
+        cleanData(storingFile, "./src/dictionnaire.txt");
+        */
+
         //call apriori here
-
-
         try{
-            Extracteur e =Extracteur.getInstance();
-            e.readData(8);
-        }catch (Exception e){
+            Runtime.getRuntime().exec("apriori.exe", null, new File("."));
+        }catch(IOException e){
             e.printStackTrace();
         }
 
-
-
-
-
-
-
+        try{
+            Extracteur e =Extracteur.getInstance();
+            //e.readData(8);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
-    private static void getData(String fileToSaveIn){
+    private static Collection<String[]> getData(String fileToSaveIn){
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -69,12 +78,12 @@ public class main {
 
 
             for (int queryNumber = 0; queryNumber < MAX_QUERIES; queryNumber++) {
-                System.out.printf("\n\n!!! Starting loop %d\n\n", queryNumber);
+                System.out.printf("/!\\ Starting loop %d\n", queryNumber);
 
 
                 if (searchTweetsRateLimit.getRemaining() == 0) {
-                    //	Yes we do, unfortunately ...
-                    System.out.printf("!!! Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
+
+                    System.out.printf("/!\\ Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
 
                     Thread.sleep((searchTweetsRateLimit.getSecondsUntilReset() + 2) * 1000l);
                 }
@@ -109,8 +118,10 @@ public class main {
                             .append(";")
                             .append(status.isRetweet())
                             .append(";")
-                            .append(status.getText());
+                            .append(status.getText().replace("\n",""));
                     resultat.add(stringBuilder.toString().split("[; ]"));
+                    stringBuilder.setLength(0);
+
 
 
                     searchTweetsRateLimit = result.getRateLimitStatus();
@@ -120,26 +131,57 @@ public class main {
 
                 /////// fin recherche et traitement résultat ///////////
             }
-            System.out.println("j'ai lu "+ totalTweets +" tweets");
-            printStringToCsv(resultat);
+            System.out.println("/!\\" + totalTweets + " tweets lus.");
         } catch(Exception exc){
             exc.printStackTrace();
         }
 
+        return resultat;
     }
 
+    private static void cleanData(String csvFilePath, String dictionnaryFilePath) {
+        CSVReader reader = new CSVReader(";");
+        ArrayList<String[]> csv = reader.splitCSV(csvFilePath);
+        ArrayList<String[]> dictionnary = reader.splitCSV(dictionnaryFilePath);
 
+        DataCleaner cleaner = new DataCleaner();
+        csv = cleaner.cleanCSV(csv, dictionnary);
+
+        try {
+            writer = new CSVWriter(new FileWriter(csvFilePath),';');
+            printStringToCsv(csv);
+        } catch(Exception exc){
+            exc.printStackTrace();
+        }
+    }
 
     private static void printStringToCsv(Collection<String[]> tweetCollection){
 
         try {
             for(String[] tweet : tweetCollection){
+
                 writer.writeNext(tweet);
             }
+
+
+
             writer.close();
         }catch(IOException exc){
             exc.printStackTrace();
         }
     }
 
+    private static void printTrans(String toPrint, String filename){
+
+        try{
+            PrintWriter transOutput = new PrintWriter(filename);
+            transOutput.println(toPrint);
+            transOutput.close();
+        }catch(Exception e ){
+            e.printStackTrace();
+        }
+
+    }
+
 }
+
