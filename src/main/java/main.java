@@ -21,10 +21,17 @@ public class main {
     public static void main(String[] args) {
 
         /////// undo comments if you want fresh data
-        //String storingFile ="./csv/tweets.txt";
-        //getData(storingFile);
-        //printTrans(CSVToTransConverter.convertToTrans(storingFile),"./csv/tweets.trans");
-        /////////////////////////////////
+        /*
+        String storingFile ="./src/main/resources/CSV/tweets.csv";
+
+        Collection<String[]> tweets = getData(storingFile);
+
+        printStringToCsv(tweets);
+
+        System.out.println("/!\\ Cleaning data ...");
+        cleanData(storingFile, "./src/dictionnaire.txt");
+        */
+
         //call apriori here
         try{
             Runtime.getRuntime().exec("apriori.exe", null, new File("."));
@@ -40,7 +47,7 @@ public class main {
         }
     }
 
-    private static void getData(String fileToSaveIn){
+    private static Collection<String[]> getData(String fileToSaveIn){
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -71,12 +78,12 @@ public class main {
 
 
             for (int queryNumber = 0; queryNumber < MAX_QUERIES; queryNumber++) {
-                System.out.printf("\n\n!!! Starting loop %d\n\n", queryNumber);
+                System.out.printf("/!\\ Starting loop %d\n", queryNumber);
 
 
                 if (searchTweetsRateLimit.getRemaining() == 0) {
 
-                    System.out.printf("!!! Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
+                    System.out.printf("/!\\ Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
 
                     Thread.sleep((searchTweetsRateLimit.getSecondsUntilReset() + 2) * 1000l);
                 }
@@ -124,15 +131,29 @@ public class main {
 
                 /////// fin recherche et traitement résultat ///////////
             }
-            System.out.println("j'ai lu "+ totalTweets +" tweets");
-            printStringToCsv(resultat);
+            System.out.println("/!\\" + totalTweets + " tweets lus.");
         } catch(Exception exc){
             exc.printStackTrace();
         }
 
+        return resultat;
     }
 
+    private static void cleanData(String csvFilePath, String dictionnaryFilePath) {
+        CSVReader reader = new CSVReader(";");
+        ArrayList<String[]> csv = reader.splitCSV(csvFilePath);
+        ArrayList<String[]> dictionnary = reader.splitCSV(dictionnaryFilePath);
 
+        DataCleaner cleaner = new DataCleaner();
+        csv = cleaner.cleanCSV(csv, dictionnary);
+
+        try {
+            writer = new CSVWriter(new FileWriter(csvFilePath),';');
+            printStringToCsv(csv);
+        } catch(Exception exc){
+            exc.printStackTrace();
+        }
+    }
 
     private static void printStringToCsv(Collection<String[]> tweetCollection){
 
