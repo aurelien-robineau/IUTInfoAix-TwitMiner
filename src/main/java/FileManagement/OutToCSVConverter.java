@@ -32,16 +32,7 @@ public class OutToCSVConverter {
         }
 
         return linesToString(lines);
-    }
-
-    public void makeCSVFile(String CSVFile, String destFile) {
-        try {
-            FileWriter writer = new FileWriter(destFile);
-            writer.write(CSVFile);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-    }
+    } // convertToCSV ()
 
     private String linesToString(ArrayList<String> lines) {
         StringBuilder fileStr = new StringBuilder();
@@ -51,5 +42,5 @@ public class OutToCSVConverter {
         }
 
         return fileStr.toString();
-    }
+    } // linesToString ()
 }

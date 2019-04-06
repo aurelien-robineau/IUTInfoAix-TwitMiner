@@ -1,6 +1,5 @@
 package DataCleaning;
 
-import java.awt.peer.SystemTrayPeer;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -33,11 +32,11 @@ public class DataCleaner {
         }
 
         return data;
-    }
+    } // cleanCSV ()
 
     public void selectBestRules(String rulesFilePath) {
         // a;r;b;freq;conf
 
 
-    }
+    } // selectBestRules ()
 }

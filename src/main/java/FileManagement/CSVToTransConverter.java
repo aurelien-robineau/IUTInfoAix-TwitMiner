@@ -1,6 +1,5 @@
 package FileManagement;
 
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -8,11 +7,12 @@ public class CSVToTransConverter {
 
     /**
      * Convert a .csv file into a .trans file.
-     * @return .trans file
+     * @param csvFilePath Path of the csv file to convert
+     * @return Converted file
      */
-    public static String convertToTrans(String csvFile) {
+    public String convertToTrans(String csvFilePath) {
         CSVReader reader = new CSVReader(";");
-        ArrayList<String[]> splitCSV = reader.splitCSV(csvFile);
+        ArrayList<String[]> splitCSV = reader.splitCSV(csvFilePath);
 
         HashMap<String, Integer> knownWords = new HashMap<String, Integer>();
         int lastValue = 0;
@@ -34,18 +34,14 @@ public class CSVToTransConverter {
             }
         }
         return splitTransToString(splitTrans);
-    }
+    } // convertToTrans ()
 
-    private static void makeTransFile(String transFile, String destFile) {
-        try {
-            FileWriter writer = new FileWriter(destFile);
-            writer.write(transFile);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-    }
-
-    private static String splitTransToString(ArrayList<ArrayList<Integer>> splitTrans) {
+    /**
+     * Make a String from a split trans file
+     * @param splitTrans Split trans file
+     * @return trans file
+     */
+    private String splitTransToString(ArrayList<ArrayList<Integer>> splitTrans) {
         StringBuilder fileStr = new StringBuilder();
         for (ArrayList<Integer> line: splitTrans) {
             for (Integer word: line) {
@@ -55,5 +51,5 @@ public class CSVToTransConverter {
         }
 
         return fileStr.toString();
-    }
+    } // splitTransToString ()
 }

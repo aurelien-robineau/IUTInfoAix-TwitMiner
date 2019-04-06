@@ -7,13 +7,13 @@ import java.util.Map;
 import java.util.Set;
 
 public class Extracteur {
-    //properties
+    // properties
     private Map< Pair, Float> confs =new HashMap<Pair, Float>();
     private Float minConf =0F;
     private Map<ArrayList<Integer>,Float> freqPattern  = new HashMap<ArrayList<Integer>, Float>();
     private static Extracteur instance ;
 
-    //getters an setters
+    // etters an setters
     public Float getMinConf() {
         return minConf;
     }
@@ -21,11 +21,11 @@ public class Extracteur {
     public void setMinConf(Float minConf) {
         this.minConf = minConf;
     }
-    //constructor
-    private Extracteur() {
 
-    }
-    //singleton getter
+    // constructor
+    private Extracteur() {}
+
+    // singleton getter
     public static   Extracteur getInstance(){
         if(instance == null){
             return new Extracteur();
@@ -33,6 +33,7 @@ public class Extracteur {
             return instance;
         }
     }
+
     /**
      * read data from the output of apriori as a csv
      * @param nbElements
@@ -40,12 +41,9 @@ public class Extracteur {
      * @throws IOException
      */
     public void readData(int nbElements, String file) throws IOException {
-
-
-
         String[] stringContent;
-        try{
 
+        try{
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
             while ((line = br.readLine()) != null) {
@@ -61,16 +59,16 @@ public class Extracteur {
                 }
                 freqPattern.put(temp,Float.parseFloat(stringContent[stringContent.length-1]));
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        //for each element in the content map
+
+        // for each element in the content map
         for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
             freqPattern.put(entry.getKey(),entry.getValue()/nbElements);
         }
 
-        //creating rules
+        // creating rules
         for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
             //if there can't be any subunit it's not interresting
             if (entry.getKey().size() < 1) continue;
@@ -87,10 +85,8 @@ public class Extracteur {
                     System.out.println(combination +" does not exist");
                 }
             }
-
         }
-    }
-
+    } // readData ()
 
     /**
      * find all combinations with the given numbers
@@ -111,7 +107,7 @@ public class Extracteur {
         combinations.remove(0);
 
         return combinations;
-    }
+    } // combinationFinder ()
 
     @Override
     public String toString() {
@@ -124,10 +120,7 @@ public class Extracteur {
         s.append(minConf);
 
         return s.toString();
-
-
-    }
-
+    } // toString ()
 
     /*
     /**
@@ -171,6 +164,5 @@ public class Extracteur {
         return confs;
     }
 */
-
 }
 

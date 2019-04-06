@@ -32,6 +32,6 @@ public class CSVReader {
         }
 
         return splittedCSV;
-    }
+    } // splitCSV ()
 
 }

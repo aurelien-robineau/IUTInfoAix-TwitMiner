@@ -1,7 +1,12 @@
 /**
- * simple pair class nothing fancy
+ * Simple pair class nothing fancy
  */
 public class Pair  {
+
+    public Pair(Object first, Object second) {
+        this.first = first;
+        this.second = second;
+    }
 
     private Object first;
     private Object second;
@@ -22,17 +27,11 @@ public class Pair  {
         this.second = second;
     }
 
-
-    public Pair(Object first, Object second) {
-        this.first = first;
-        this.second = second;
-    }
-
     @Override
     public String toString() {
         return "\n{" +
-                "first" + first +
-                ", second" + second +
+                "first : " + first +
+                ", second : " + second +
                 '}';
     }
 }
