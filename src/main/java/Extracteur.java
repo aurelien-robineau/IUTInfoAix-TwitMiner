@@ -39,9 +39,8 @@ public class Extracteur {
      * @return
      * @throws IOException
      */
-    public void readData(int nbElements) throws IOException {
+    public void readData(int nbElements, String file) throws IOException {
 
-        String file = "./src/main/java/csv/test.txt";
 
 
         String[] stringContent;
