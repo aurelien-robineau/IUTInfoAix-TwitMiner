@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-   </children>
-</AnchorPane>
+<fx:root fx:id="homeRoot" alignment="TOP_CENTER" prefHeight="579.0" prefWidth="596.0" style="-fx-background-color: #343434;" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="61.0" prefWidth="740.0">
+         <children>
+              <ImageView fitHeight="38.0" fitWidth="47.0">
+                  <image>
+                      <Image url="@../IMG/twitter_logo.png" />
+                  </image>
+              </ImageView>
+              <Label alignment="BOTTOM_CENTER" prefHeight="37.0" prefWidth="127.0" text="TwitMiner" textFill="#00acef">
+               <font>
+                  <Font name="Microsoft JhengHei" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="82.0" prefWidth="740.0">
+         <children>
+              <TextField prefHeight="42.0" prefWidth="346.0" promptText="Recherche Twitter ..." style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Button mnemonicParsing="false" onAction="#mine" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #00acef; -fx-background-radius: 0;" text="Miner" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="labeltest" alignment="CENTER" prefHeight="107.0" prefWidth="122.0" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei" size="19.0" />
+         </font></Label>
+    </children>
+</fx:root>

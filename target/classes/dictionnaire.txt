@@ -1,0 +1,6 @@
+je;tu;il;elle;nous;vous;ils;elles;
+me;te;le;les;leur;
+lui;en;y;
+moi;toi;eux;
+ce;c';ça;cela;ceci;
+un;

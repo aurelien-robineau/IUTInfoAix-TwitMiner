@@ -1,7 +1,11 @@
 import DataCleaning.DataCleaner;
 import FileManagement.CSVReader;
 import FileManagement.CSVToTransConverter;
+import GUI.HomeController;
 import com.opencsv.CSVWriter;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -13,14 +17,25 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
-public class main {
+public class main extends Application {
     private static final int MAX_QUERIES			= 100;
     private static final int TWEETS_PER_QUERY		= 100;
     private static final String SEARCH_TERM			= "esport";
     private static CSVWriter writer ;
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        Scene scene = new Scene(new HomeController());
+        primaryStage.setTitle("TwitMiner");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+    }
 
     public static void main(String[] args) {
+
+        Application.launch(args);
 
         /////// undo comments if you want fresh data
         /*
@@ -35,6 +50,8 @@ public class main {
         */
 
         //call apriori here
+
+        /*
         try{
             Runtime.getRuntime().exec("apriori.exe", null, new File("."));
         }catch(IOException e){
@@ -47,6 +64,7 @@ public class main {
         }catch (Exception e){
             e.printStackTrace();
         }
+        */
     }
 
     private static Collection<String[]> getData(String fileToSaveIn){
