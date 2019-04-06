@@ -3,8 +3,10 @@ import com.opencsv.CSVWriter;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
@@ -12,30 +14,30 @@ import java.util.Map;
 public class main {
     private static final int MAX_QUERIES			= 100;
     private static final int TWEETS_PER_QUERY		= 100;
-    private static final String SEARCH_TERM			= "canard";
+    private static final String SEARCH_TERM			= "esport";
     private static CSVWriter writer ;
 
 
     public static void main(String[] args) {
-        String storingFile ="./src/main/java/csv/tweets.txt";
-        getData(storingFile);
-        //System.out.println(CSVToTransConverter.convertToTrans(storingFile));
+
+        /////// undo comments if you want fresh data
+        //String storingFile ="./csv/tweets.txt";
+        //getData(storingFile);
+        //printTrans(CSVToTransConverter.convertToTrans(storingFile),"./csv/tweets.trans");
+        /////////////////////////////////
         //call apriori here
-
-
         try{
-            Extracteur e =Extracteur.getInstance();
-            e.readData(8);
-        }catch (Exception e){
+            Runtime.getRuntime().exec("apriori.exe", null, new File("."));
+        }catch(IOException e){
             e.printStackTrace();
         }
 
-
-
-
-
-
-
+        try{
+            Extracteur e =Extracteur.getInstance();
+            //e.readData(8);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private static void getData(String fileToSaveIn){
@@ -73,7 +75,7 @@ public class main {
 
 
                 if (searchTweetsRateLimit.getRemaining() == 0) {
-                    //	Yes we do, unfortunately ...
+
                     System.out.printf("!!! Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
 
                     Thread.sleep((searchTweetsRateLimit.getSecondsUntilReset() + 2) * 1000l);
@@ -109,8 +111,10 @@ public class main {
                             .append(";")
                             .append(status.isRetweet())
                             .append(";")
-                            .append(status.getText());
+                            .append(status.getText().replace("\n",""));
                     resultat.add(stringBuilder.toString().split("[; ]"));
+                    stringBuilder.setLength(0);
+
 
 
                     searchTweetsRateLimit = result.getRateLimitStatus();
@@ -134,12 +138,29 @@ public class main {
 
         try {
             for(String[] tweet : tweetCollection){
+
                 writer.writeNext(tweet);
             }
+
+
+
             writer.close();
         }catch(IOException exc){
             exc.printStackTrace();
         }
     }
 
+    private static void printTrans(String toPrint, String filename){
+
+        try{
+            PrintWriter transOutput = new PrintWriter(filename);
+            transOutput.println(toPrint);
+            transOutput.close();
+        }catch(Exception e ){
+            e.printStackTrace();
+        }
+
+    }
+
 }
+
