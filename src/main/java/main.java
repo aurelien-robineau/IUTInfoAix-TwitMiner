@@ -21,42 +21,39 @@ import java.util.Map;
 public class main extends Application {
 
     public static HashMap<Integer, String> numberToWords = new HashMap<Integer, String>();
-    private static final int    MAX_QUERIES	     = 100;
+    private static final int    MAX_QUERIES	     = 10;
     private static final int    TWEETS_PER_QUERY = 100;
-    private static final String SEARCH_TERM      = "Esport";
+    private static String SEARCH_TERM      = "Esport";
+    private static final String transFilePath   = "./src/main/ressources/trans/";
+    private static final String csvFilePath   = "./src/main/ressources/CSV/";
+    private static final String aprioriFilePath   = "src/main/ressources/aprioriOut/";
+
     private static CSVWriter    writer ;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        /*
         Scene scene = new Scene(new HomeController());
         scene.getStylesheets().addAll("css/style.css");
         primaryStage.setTitle("TwitMiner");
         primaryStage.setScene(scene);
-        primaryStage.show();
+        primaryStage.show();*/
     } // start ()
 
     public static void main(String[] args) {
+        //Application.launch(args);
 
-        Application.launch(args);
 
-        String csvFilePath   = "./src/main/resources/CSV/" + SEARCH_TERM + ".csv";
-        String transFilePath = "./src/main/resources/trans/" + SEARCH_TERM + ".trans";
-        String outFilePath   = "./src/main/resources/aprioriOut/" + SEARCH_TERM + ".out";
+        String transFilePath = csvFilePath + SEARCH_TERM + ".trans";
+        String outFilePath   = aprioriFilePath + SEARCH_TERM+".out";
+        getFreshData("us");
 
-        /////// Undo comments if you want fresh data
-        /*
-        Collection<String[]> tweets = getData(csvFilePath);
 
-        printStringToCsv(tweets);
 
-        System.out.println("/!\\ Cleaning data ...");
-        cleanData(csvFilePath, "./src/main/resources/dictionary.csv");
 
-        System.out.println("/!\\ Creating trans file ...");
-        CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        numberToWords = csvToTransConverter.convertToTrans(csvFilePath, transFilePath);
-        System.out.println("/!\\ trans file created !");
-        */
+
+
+
         /*
         try {
             Process process = new ProcessBuilder("./src/main/resources/apriori.exe", transFilePath, "2", outFilePath).start();
@@ -82,6 +79,29 @@ public class main extends Application {
         }
         */
     } // main ()
+
+    public static void getFreshData(String searchTerm){
+        SEARCH_TERM = searchTerm;
+        Collection<String[]> tweets = getData(csvFilePath+SEARCH_TERM +".csv");
+
+        printStringToCsv(tweets);
+
+        System.out.println("/!\\ Cleaning data ...");
+        cleanData(csvFilePath+SEARCH_TERM +".csv", "./src/main/resources/dictionary.csv");
+
+        System.out.println("/!\\ Creating trans file ...");
+        CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
+        numberToWords = csvToTransConverter.convertToTrans(csvFilePath+SEARCH_TERM +".csv"
+                , transFilePath+SEARCH_TERM +".trans");
+        try{
+            Apriori.run(transFilePath+SEARCH_TERM +".trans",0.6F,  aprioriFilePath+SEARCH_TERM +".out");
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
 
     private static Collection<String[]> getData(String fileToSaveIn){
         // The factory instance is re-useable and thread safe.
