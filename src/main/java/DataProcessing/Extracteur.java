@@ -1,6 +1,7 @@
 package DataProcessing;
 
 import Main.Pair;
+import Main.main;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import java.io.*;
@@ -44,6 +45,7 @@ public class Extracteur {
      * @throws IOException
      */
     public void readData(int nbElements, String file) throws IOException {
+
         String[] stringContent;
 
         try{
@@ -78,15 +80,17 @@ public class Extracteur {
 
             //we search patterns for interresting rules
             for (ArrayList<Integer> combination : combinationFinder(entry.getKey())) {
-                if(freqPattern.get(combination) != null){
+                try{
                     Float conf = entry.getValue()/freqPattern.get(combination);
 
                     if(conf >=minConf){
-                        confs.put(new Pair(entry.getKey(),combination),conf);
+                        confs.put(new Pair(main.numberToWords.get(entry.getKey()),main.numberToWords.get(combination)),conf);
                     }
-                }else{
-                    System.out.println(combination +" does not exist");
+                }catch (NullPointerException e){
+                    System.out.println("number does not match with anything");
+                    e.printStackTrace();
                 }
+
             }
         }
     } // readData ()
