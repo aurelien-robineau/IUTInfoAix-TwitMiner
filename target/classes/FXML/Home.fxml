@@ -18,7 +18,7 @@
          <children>
               <ImageView fitHeight="38.0" fitWidth="47.0">
                   <image>
-                      <Image url="@../img/twitter_logo.png" />
+                      <Image url="@../img/twitminer_logo.png" />
                   </image>
               </ImageView>
               <Label alignment="BOTTOM_CENTER" prefHeight="37.0" prefWidth="127.0" text="TwitMiner" textFill="#00acef">
@@ -77,5 +77,6 @@
             </HBox>
          </children>
       </VBox>
+      <Label text="Label" textFill="WHITE" />
     </children>
 </fx:root>

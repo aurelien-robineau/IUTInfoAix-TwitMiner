@@ -1,5 +1,7 @@
 package GUI;
 
+import DataProcessing.Apriori;
+import FileManagement.CSVToTransConverter;
 import Main.LineCounter;
 import Main.main;
 import javafx.beans.value.ChangeListener;
@@ -12,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 
 import java.io.*;
+import java.util.Collection;
 
 public class HomeController extends VBox {
 
@@ -35,6 +38,9 @@ public class HomeController extends VBox {
 
     @FXML
     private Button btnMineExistingData;
+
+    @FXML
+    private Label step;
 
     /**
      * Default constructor
@@ -81,7 +87,19 @@ public class HomeController extends VBox {
             int nbTweets = Integer.parseInt(nbOfTweetsField.getText());
             String query = newQuery.getText();
 
-            main.getFreshData(query, nbTweets);
+            main.initializeParams(query, nbTweets);
+
+            Collection<String[]> tweets = main.getData();
+
+            main.printStringToCsv(tweets);
+
+            System.out.println("/!\\ Cleaning data ...");
+            main.cleanData("./src/main/resources/dictionary.csv");
+
+            System.out.println("/!\\ Creating trans file ...");
+            main.createTransFile();
+
+            main.runApriori();
 
             //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
 

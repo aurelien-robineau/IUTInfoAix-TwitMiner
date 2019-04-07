@@ -23,13 +23,13 @@ public class main extends Application {
 
     public static HashMap<Integer, String> numberToWords = new HashMap<Integer, String>();
 
-    public static final String transFilePath    = "./src/main/resources/trans/";
-    public static final String csvFilePath      = "./src/main/resources/CSV/";
-    public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
+    private static final String transFilePath    = "./src/main/resources/trans/";
+    private static final String csvFilePath      = "./src/main/resources/CSV/";
+    private static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
 
-    private static int         MAX_QUERIES;
-    private static int         TWEETS_PER_QUERY;
-    private static String      SEARCH_TERM;
+    private static int          MAX_QUERIES;
+    private static int          TWEETS_PER_QUERY;
+    private static String       SEARCH_TERM;
 
     private static CSVWriter   writer ;
 
@@ -44,17 +44,21 @@ public class main extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
-
-        /*
-        try {
-            DataProcessing.Extracteur e = DataProcessing.Extracteur.getInstance();
-            //e.readData(8);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-        */
     } // main ()
 
+    public static void initializeParams(String searchTerm, int numberOfTweetsMax) {
+        SEARCH_TERM = searchTerm;
+
+        if(numberOfTweetsMax >= 100) {
+            MAX_QUERIES = numberOfTweetsMax / 100;
+            TWEETS_PER_QUERY = 100;
+        } else {
+            MAX_QUERIES = 1;
+            TWEETS_PER_QUERY = numberOfTweetsMax;
+        }
+    } // initializeParams ()
+
+    /*
     public static void getFreshData(String searchTerm, int numberOfTweetsMax){
         SEARCH_TERM = searchTerm;
 
@@ -76,15 +80,18 @@ public class main extends Application {
         System.out.println("/!\\ Creating trans file ...");
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
         numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM +".csv",
-                                               transFilePath + SEARCH_TERM +".trans");
+                transFilePath + SEARCH_TERM +".trans");
         try {
             Apriori.run(transFilePath + SEARCH_TERM + ".trans",0.6F,  aprioriFilePath + SEARCH_TERM + ".out");
         } catch(Exception e){
             e.printStackTrace();
         }
     } // getFreshData ()
+    */
 
-    private static Collection<String[]> getData(String fileToSaveIn){
+    public static Collection<String[]> getData(){
+        String fileToSaveIn = csvFilePath + SEARCH_TERM + ".csv";
+
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -164,26 +171,27 @@ public class main extends Application {
 
     /**
      * Clean the tweets
-     * @param csvFilePath CSV containing the tweets
      * @param dictionaryFilePath CSV containing the words to delete
      */
-    private static void cleanData(String csvFilePath, String dictionaryFilePath) {
+    public static void cleanData(String dictionaryFilePath) {
+        String csvFile = csvFilePath + SEARCH_TERM + ".csv";
+
         CSVReader reader = new CSVReader(";");
-        ArrayList<String[]> csv = reader.splitCSV(csvFilePath);
+        ArrayList<String[]> csv = reader.splitCSV(csvFile);
         ArrayList<String[]> dictionary = reader.splitCSV(dictionaryFilePath);
 
         DataCleaner cleaner = new DataCleaner();
         csv = cleaner.cleanCSV(csv, dictionary);
 
         try {
-            writer = new CSVWriter(new FileWriter(csvFilePath),';');
+            writer = new CSVWriter(new FileWriter(csvFile),';');
             printStringToCsv(csv);
         } catch(Exception exc){
             exc.printStackTrace();
         }
     } // cleanData ()
 
-    private static void printStringToCsv(Collection<String[]> tweetCollection){
+    public static void printStringToCsv(Collection<String[]> tweetCollection){
         try {
             for(String[] tweet : tweetCollection){
                 writer.writeNext(tweet);
@@ -193,4 +201,18 @@ public class main extends Application {
             exc.printStackTrace();
         }
     } // printStringToCSV
+
+    public static void createTransFile() {
+        CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
+        numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM + ".csv",
+                transFilePath + SEARCH_TERM +".trans");
+    } // createTransFile
+
+    public static void runApriori() {
+        try {
+            Apriori.run(main.transFilePath + SEARCH_TERM + ".trans",0.6F,  main.aprioriFilePath + SEARCH_TERM + ".out");
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    } // runApriori ()
 }
