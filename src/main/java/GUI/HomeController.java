@@ -120,8 +120,11 @@ public class HomeController extends VBox {
     private void changeDataSelection() {
         newDataName.setDisable(!newDataName.isDisabled());
         btnMineNewData.setDisable(!btnMineNewData.isDisabled());
+        nbOfTweets.setDisable(!nbOfTweets.isDisabled());
+
         existingData.setDisable(!existingData.isDisabled());
         btnMineExistingData.setDisable(!btnMineExistingData.isDisabled());
+        nbOfExistingTweets.setDisable(!nbOfExistingTweets.isDisabled());
     } // changeDataSelection ()
 
     @FXML

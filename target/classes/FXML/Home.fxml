@@ -68,7 +68,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="nbOfExistingTweets" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="-----">
+                  <TextField fx:id="nbOfExistingTweets" alignment="CENTER_RIGHT" editable="false" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="-----">
                      <font>
                         <Font size="15.0" />
                      </font>

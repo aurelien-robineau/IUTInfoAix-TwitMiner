@@ -41,7 +41,7 @@ public class main extends Application {
 
         String csvFilePath   = "./src/main/resources/CSV/" + SEARCH_TERM + ".csv";
         String transFilePath = "./src/main/resources/trans/" + SEARCH_TERM + ".trans";
-        String outFilePath   = "./src/main/resources/out/" + SEARCH_TERM + ".out";
+        String outFilePath   = "./src/main/resources/aprioriOut/" + SEARCH_TERM + ".out";
 
         /////// Undo comments if you want fresh data
         /*
