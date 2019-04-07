@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class main extends Application {
 
-    public static HashMap<Integer, String> numberToWord = new HashMap<Integer, String>();
+    public static HashMap<Integer, String> numberToWords = new HashMap<Integer, String>();
     private static final int    MAX_QUERIES	     = 100;
     private static final int    TWEETS_PER_QUERY = 100;
     private static final String SEARCH_TERM      = "Esport";
@@ -39,36 +39,33 @@ public class main extends Application {
 
         Application.launch(args);
 
-        String storingFile ="./src/main/resources/CSV/" + SEARCH_TERM + ".csv";
+        String csvFilePath   = "./src/main/resources/CSV/" + SEARCH_TERM + ".csv";
+        String transFilePath = "./src/main/resources/trans/" + SEARCH_TERM + ".trans";
+        String outFilePath   = "./src/main/resources/out/" + SEARCH_TERM + ".out";
 
         /////// Undo comments if you want fresh data
         /*
-        Collection<String[]> tweets = getData(storingFile);
+        Collection<String[]> tweets = getData(csvFilePath);
 
         printStringToCsv(tweets);
 
         System.out.println("/!\\ Cleaning data ...");
-        cleanData(storingFile, "./src/main/resources/dictionary.csv");
+        cleanData(csvFilePath, "./src/main/resources/dictionary.csv");
 
         System.out.println("/!\\ Creating trans file ...");
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        String trans = csvToTransConverter.convertToTrans(storingFile);
-        printTrans(trans, "./src/main/resources/trans/" + SEARCH_TERM + ".trans");
-        System.out.println("/!\\ trans file created !");
-
-        System.out.println("/!\\ Creating trans file ...");
-        CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        numberToWords = csvToTransConverter.convertToTrans(storingFile);
+        numberToWords = csvToTransConverter.convertToTrans(csvFilePath, transFilePath);
         System.out.println("/!\\ trans file created !");
         */
-/*
+        /*
         try {
-            Process process = new ProcessBuilder("./src/main/resources/apriori.exe","./src/main/resources/trans/" + SEARCH_TERM + ".trans","2", "./src/main/resources/out/" + SEARCH_TERM + ".out").start();
+            Process process = new ProcessBuilder("./src/main/resources/apriori.exe", transFilePath, "2", outFilePath).start();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
-*/
-        // !!! \\ Call apriori on trans here. Out file has to be -> "./src/main/resources/out/" + SEARCH_TERM + ".out"
+        */
+
+        // !!! \\ Call apriori on trans here.
 
         /*
         try {
