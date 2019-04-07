@@ -191,7 +191,7 @@ public class main extends Application {
                 transFilePath + SEARCH_TERM +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
+                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -204,18 +204,18 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();
             fis.close();
-        }catch(IOException ioe) {
+        } catch(IOException ioe) {
             ioe.printStackTrace();
-        }catch(ClassNotFoundException c) {
+        } catch(ClassNotFoundException c) {
             System.out.println("Class not found");
             c.printStackTrace();
         }
-    }
+    } // unserializeNumberToWords ()
 
     private static void runApriori() {
         try {
