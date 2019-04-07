@@ -15,9 +15,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 public class main extends Application {
+    public static HashMap<String, Integer> knownWords = new HashMap<String, Integer>();
     private static final int    MAX_QUERIES	     = 100;
     private static final int    TWEETS_PER_QUERY = 100;
     private static final String SEARCH_TERM      = "esport";
@@ -34,7 +36,7 @@ public class main extends Application {
 
     public static void main(String[] args) {
 
-        Application.launch(args);
+       // Application.launch(args);
 
         String storingFile ="./src/main/resources/CSV/" + SEARCH_TERM + ".csv";
 
@@ -49,8 +51,7 @@ public class main extends Application {
 
         System.out.println("/!\\ Creating trans file ...");
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        String trans = csvToTransConverter.convertToTrans(storingFile);
-        printTrans(trans, "./src/main/resources/trans/" + SEARCH_TERM + ".trans");
+        knownWords = csvToTransConverter.convertToTrans(storingFile);
         System.out.println("/!\\ trans file created !");
         */
 
@@ -70,6 +71,7 @@ public class main extends Application {
             e.printStackTrace();
         }
         */
+
     }
 
     private static Collection<String[]> getData(String fileToSaveIn){
@@ -182,13 +184,5 @@ public class main extends Application {
         }
     } // printStringToCSV
 
-    private static void printTrans(String toPrint, String filename){
-        try{
-            PrintWriter transOutput = new PrintWriter(filename);
-            transOutput.println(toPrint);
-            transOutput.close();
-        } catch(Exception e ){
-            e.printStackTrace();
-        }
-    } // printTrans ()
+
 }
