@@ -9,8 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class HomeController extends VBox {
 
@@ -86,6 +85,28 @@ public class HomeController extends VBox {
         existingData.setItems(options);
     } // constructor
 
+    // From : https://stackoverflow.com/questions/453018/number-of-lines-in-a-file-in-java
+    private Integer countLinesOld(String filename) throws IOException {
+        InputStream is = new BufferedInputStream(new FileInputStream(filename));
+        try {
+            byte[] c = new byte[1024];
+            int count = 0;
+            int readChars = 0;
+            boolean empty = true;
+            while ((readChars = is.read(c)) != -1) {
+                empty = false;
+                for (int i = 0; i < readChars; ++i) {
+                    if (c[i] == '\n') {
+                        ++count;
+                    }
+                }
+            }
+            return (count == 0 && !empty) ? 1 : count;
+        } finally {
+            is.close();
+        }
+    } // countLinesOld ()
+
     @FXML
     private void mine() {
         if (labeltest.getText().equals("")) {
@@ -102,4 +123,16 @@ public class HomeController extends VBox {
         existingData.setDisable(!existingData.isDisabled());
         btnMineExistingData.setDisable(!btnMineExistingData.isDisabled());
     } // changeDataSelection ()
+
+    @FXML
+    private void updateNumberOfExistingTweets() {
+        String file = "./src/main/resources/CSV/" + existingData.getValue() + ".csv";
+        try {
+            Integer nbOfLines = countLinesOld(file);
+            nbOfExistingTweets.setText(nbOfLines.toString());
+        } catch (Exception e) {
+            nbOfExistingTweets.setText("Erreur");
+            System.err.println(e.getMessage());
+        }
+    }
 }
