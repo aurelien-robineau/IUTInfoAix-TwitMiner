@@ -110,11 +110,12 @@ public class HomeController extends VBox {
             if(query.equals(""))
                 query = "untitled";
 
-            main.mine(query, nbTweets);
-
             minLift.setText(minLift.getText().equals("") ? "1" : minLift.getText());
             minConf.setText(minConf.getText().equals("") ? "0.5" : minConf.getText());
             minFreq.setText(minFreq.getText().equals("") ? "0.1" : minFreq.getText());
+
+            main.mine(query, nbTweets, Float.parseFloat(minFreq.getText()));
+
             main.processData(Integer.parseInt(minLift.getText()), Float.parseFloat(minFreq.getText()), Float.parseFloat(minConf.getText()), query);
 
             updateExistingData();

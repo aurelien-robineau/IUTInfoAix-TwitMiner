@@ -52,7 +52,7 @@ public class main extends Application {
         Application.launch(args);
     } // main ()
 
-    public static void mine(String query, int nbTweets) {
+    public static void mine(String query, int nbTweets, float freqMin) {
         System.out.println("/!\\ Initializing parameters ...");
         initializeParams(query, nbTweets);
 
@@ -67,7 +67,7 @@ public class main extends Application {
         createTransFile();
 
         System.out.println("/!\\ Run apriori ...");
-        runApriori();
+        runApriori(freqMin);
 
         System.out.println("/!\\ out -> csv ...");
         try{
@@ -262,9 +262,9 @@ public class main extends Application {
         }
     }
 
-    private static void runApriori() {
+    private static void runApriori(Float freqMin) {
         try {
-            Apriori.run(main.transFilePath + search_Term + ".trans",0.3F,  main.aprioriFilePath + search_Term + ".out");
+            Apriori.run(main.transFilePath + search_Term + ".trans", freqMin,  main.aprioriFilePath + search_Term + ".out");
         } catch(Exception e){
             e.printStackTrace();
         }
