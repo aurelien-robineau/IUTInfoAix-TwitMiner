@@ -1,3 +1,5 @@
+package Main;
+
 /**
  * Simple pair class nothing fancy
  */

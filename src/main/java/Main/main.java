@@ -1,4 +1,7 @@
+package Main;
+
 import DataCleaning.DataCleaner;
+import DataProcessing.Apriori;
 import FileManagement.CSVReader;
 import FileManagement.CSVToTransConverter;
 import GUI.HomeController;
@@ -9,10 +12,8 @@ import javafx.stage.Stage;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,58 +22,32 @@ import java.util.Map;
 public class main extends Application {
 
     public static HashMap<Integer, String> numberToWords = new HashMap<Integer, String>();
-    private static final int    MAX_QUERIES	     = 10;
-    private static final int    TWEETS_PER_QUERY = 100;
-    private static String SEARCH_TERM      = "Esport";
-    private static final String transFilePath   = "./src/main/ressources/trans/";
-    private static final String csvFilePath   = "./src/main/ressources/CSV/";
-    private static final String aprioriFilePath   = "src/main/ressources/aprioriOut/";
 
-    private static CSVWriter    writer ;
+    public static final String transFilePath    = "./src/main/resources/trans/";
+    public static final String csvFilePath      = "./src/main/resources/CSV/";
+    public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
+
+    private static int         MAX_QUERIES;
+    private static int         TWEETS_PER_QUERY;
+    private static String      SEARCH_TERM;
+
+    private static CSVWriter   writer ;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        /*
         Scene scene = new Scene(new HomeController());
         scene.getStylesheets().addAll("css/style.css");
         primaryStage.setTitle("TwitMiner");
         primaryStage.setScene(scene);
-        primaryStage.show();*/
+        primaryStage.show();
     } // start ()
 
     public static void main(String[] args) {
-        //Application.launch(args);
-
-
-        String transFilePath = csvFilePath + SEARCH_TERM + ".trans";
-        String outFilePath   = aprioriFilePath + SEARCH_TERM+".out";
-        getFreshData("us");
-
-
-
-
-
-
+        Application.launch(args);
 
         /*
         try {
-            Process process = new ProcessBuilder("./src/main/resources/apriori.exe", transFilePath, "2", outFilePath).start();
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-        */
-
-        // !!! \\ Call apriori on trans here.
-
-        /*
-        try {
-            Runtime.getRuntime().exec("apriori.exe", null, new File("."));
-        } catch IOException e){
-            e.printStackTrace();
-        }
-
-        try {
-            Extracteur e = Extracteur.getInstance();
+            DataProcessing.Extracteur e = DataProcessing.Extracteur.getInstance();
             //e.readData(8);
         } catch (Exception e){
             e.printStackTrace();
@@ -80,9 +55,18 @@ public class main extends Application {
         */
     } // main ()
 
-    public static void getFreshData(String searchTerm){
+    public static void getFreshData(String searchTerm, int numberOfTweetsMax){
         SEARCH_TERM = searchTerm;
-        Collection<String[]> tweets = getData(csvFilePath+SEARCH_TERM +".csv");
+
+        if(numberOfTweetsMax >= 100) {
+            MAX_QUERIES = numberOfTweetsMax / 100;
+            TWEETS_PER_QUERY = 100;
+        } else {
+            MAX_QUERIES = 1;
+            TWEETS_PER_QUERY = numberOfTweetsMax;
+        }
+
+        Collection<String[]> tweets = getData(csvFilePath + SEARCH_TERM + ".csv");
 
         printStringToCsv(tweets);
 
@@ -91,17 +75,14 @@ public class main extends Application {
 
         System.out.println("/!\\ Creating trans file ...");
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        numberToWords = csvToTransConverter.convertToTrans(csvFilePath+SEARCH_TERM +".csv"
-                , transFilePath+SEARCH_TERM +".trans");
-        try{
-            Apriori.run(transFilePath+SEARCH_TERM +".trans",0.6F,  aprioriFilePath+SEARCH_TERM +".out");
-
-        }catch(Exception e){
+        numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM +".csv",
+                                               transFilePath + SEARCH_TERM +".trans");
+        try {
+            Apriori.run(transFilePath + SEARCH_TERM + ".trans",0.6F,  aprioriFilePath + SEARCH_TERM + ".out");
+        } catch(Exception e){
             e.printStackTrace();
         }
-
-
-    }
+    } // getFreshData ()
 
     private static Collection<String[]> getData(String fileToSaveIn){
         // The factory instance is re-useable and thread safe.
@@ -121,10 +102,10 @@ public class main extends Application {
             // Initialize csv writer
             writer = new CSVWriter(new FileWriter(fileToSaveIn),';');
 
-            //	This returns all the various rate limits in effect for us with the Twitter API
+            // This returns all the various rate limits in effect for us with the Twitter API
             Map<String, RateLimitStatus> rateLimitStatus = twitter.getRateLimitStatus("search");
 
-            //	This finds the rate limit specifically for doing the search API call we use in this program
+            // This finds the rate limit specifically for doing the search API call we use in this program
             RateLimitStatus searchTweetsRateLimit = rateLimitStatus.get("/search/tweets");
 
             for (int queryNumber = 0; queryNumber < MAX_QUERIES; queryNumber++) {
@@ -212,14 +193,4 @@ public class main extends Application {
             exc.printStackTrace();
         }
     } // printStringToCSV
-
-    private static void printTrans(String toPrint, String filename){
-        try{
-            PrintWriter transOutput = new PrintWriter(filename);
-            transOutput.println(toPrint);
-            transOutput.close();
-        } catch(Exception e ){
-            e.printStackTrace();
-        }
-    } // printTrans ()
 }

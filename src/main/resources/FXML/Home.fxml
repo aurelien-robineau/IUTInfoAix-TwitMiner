@@ -30,14 +30,14 @@
       </HBox>
       <VBox alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="596.0">
          <children>
-            <CheckBox fx:id="selectMode" mnemonicParsing="false" onAction="#changeDataSelection" prefHeight="36.0" prefWidth="230.0" text="Utiliser des données existantes" textFill="WHITE">
+            <CheckBox fx:id="useOldData" mnemonicParsing="false" onAction="#changeDataSelection" prefHeight="36.0" prefWidth="230.0" text="Utiliser des données existantes" textFill="WHITE">
                <font>
                   <Font name="Microsoft JhengHei" size="14.0" />
                </font>
             </CheckBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="46.0" prefWidth="596.0">
                <children>
-                    <TextField fx:id="newDataName" prefHeight="42.0" prefWidth="346.0" promptText="Recherche Twitter ..." style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">
+                    <TextField fx:id="newQuery" prefHeight="42.0" prefWidth="346.0" promptText="Recherche Twitter ..." style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -50,7 +50,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                   <TextField fx:id="nbOfTweets" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="10000">
+                   <TextField fx:id="nbOfTweetsField" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="10000">
                        <font>
                            <Font size="15.0" />
                        </font>
@@ -68,7 +68,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="nbOfExistingTweets" alignment="CENTER_RIGHT" editable="false" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="-----">
+                  <TextField fx:id="nbOfExistingTweetsField" alignment="CENTER_RIGHT" editable="false" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="-----">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -77,9 +77,5 @@
             </HBox>
          </children>
       </VBox>
-      <Label fx:id="labeltest" alignment="CENTER" prefHeight="107.0" prefWidth="122.0" textFill="WHITE">
-         <font>
-            <Font name="Microsoft JhengHei" size="19.0" />
-         </font></Label>
     </children>
 </fx:root>

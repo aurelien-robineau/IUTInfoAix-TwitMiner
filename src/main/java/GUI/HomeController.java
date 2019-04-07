@@ -1,5 +1,7 @@
 package GUI;
 
+import Main.LineCounter;
+import Main.main;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -14,22 +16,19 @@ import java.io.*;
 public class HomeController extends VBox {
 
     @FXML
-    private Label labeltest;
+    private CheckBox useOldData;
 
     @FXML
-    private CheckBox selectMode;
-
-    @FXML
-    private TextField newDataName;
+    private TextField newQuery;
 
     @FXML
     private Button btnMineNewData;
 
     @FXML
-    private TextField nbOfTweets;
+    private TextField nbOfTweetsField;
 
     @FXML
-    private TextField nbOfExistingTweets;
+    private TextField nbOfExistingTweetsField;
 
     @FXML
     private ComboBox existingData;
@@ -53,26 +52,72 @@ public class HomeController extends VBox {
 
         existingData.setDisable(true);
         btnMineExistingData.setDisable(true);
-        nbOfExistingTweets.setDisable(true);
+        nbOfExistingTweetsField.setDisable(true);
 
         // Force the field to be numeric only
-        nbOfTweets.textProperty().addListener(new ChangeListener<String>() {
+        nbOfTweetsField.textProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> observable, String oldValue,
                                 String newValue) {
                 if (!newValue.matches("\\d*")) {
-                    nbOfTweets.setText(newValue.replaceAll("[^\\d]", ""));
+                    nbOfTweetsField.setText(newValue.replaceAll("[^\\d]", ""));
                 }
                 // Avoid empty text
                 if (newValue.equals("")) {
-                    nbOfTweets.setText("0");
+                    nbOfTweetsField.setText("0");
                 }
                 // Delete first 0
                 if (newValue.length() > 1 && newValue.substring(0,1).equals("0")) {
-                    nbOfTweets.setText(newValue.substring(1,newValue.length()));
+                    nbOfTweetsField.setText(newValue.substring(1,newValue.length()));
                 }
             }
         });
 
+        updateExistingData();
+    } // constructor
+
+    @FXML
+    private void mine() {
+        if(!useOldData.isSelected()) {
+            int nbTweets = Integer.parseInt(nbOfTweetsField.getText());
+            String query = newQuery.getText();
+
+            main.getFreshData(query, nbTweets);
+
+            //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
+
+            updateExistingData();
+        }
+        else {
+            String query = existingData.getValue().toString();
+            System.out.println(query);
+            //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
+        }
+    } // mine ()
+
+    @FXML
+    private void changeDataSelection() {
+        newQuery.setDisable(!newQuery.isDisabled());
+        btnMineNewData.setDisable(!btnMineNewData.isDisabled());
+        nbOfTweetsField.setDisable(!nbOfTweetsField.isDisabled());
+
+        existingData.setDisable(!existingData.isDisabled());
+        btnMineExistingData.setDisable(!btnMineExistingData.isDisabled());
+        nbOfExistingTweetsField.setDisable(!nbOfExistingTweetsField.isDisabled());
+    } // changeDataSelection ()
+
+    @FXML
+    private void updateNumberOfExistingTweets() {
+        String file = "./src/main/resources/CSV/" + existingData.getValue() + ".csv";
+        try {
+            Integer nbOfLines = LineCounter.countLines(file);
+            nbOfExistingTweetsField.setText(nbOfLines.toString());
+        } catch (Exception e) {
+            nbOfExistingTweetsField.setText("Erreur");
+            System.err.println(e.getMessage());
+        }
+    }
+
+    private void updateExistingData() {
         File dataFolder = new File("./src/main/resources/trans");
         File[] dataFiles = dataFolder.listFiles();
 
@@ -83,59 +128,5 @@ public class HomeController extends VBox {
         }
 
         existingData.setItems(options);
-    } // constructor
-
-    // From : https://stackoverflow.com/questions/453018/number-of-lines-in-a-file-in-java
-    private Integer countLinesOld(String filename) throws IOException {
-        InputStream is = new BufferedInputStream(new FileInputStream(filename));
-        try {
-            byte[] c = new byte[1024];
-            int count = 0;
-            int readChars = 0;
-            boolean empty = true;
-            while ((readChars = is.read(c)) != -1) {
-                empty = false;
-                for (int i = 0; i < readChars; ++i) {
-                    if (c[i] == '\n') {
-                        ++count;
-                    }
-                }
-            }
-            return (count == 0 && !empty) ? 1 : count;
-        } finally {
-            is.close();
-        }
-    } // countLinesOld ()
-
-    @FXML
-    private void mine() {
-        if (labeltest.getText().equals("")) {
-            labeltest.setText("Mine !");
-        } else {
-            labeltest.setText("");
-        }
-    } // mine ()
-
-    @FXML
-    private void changeDataSelection() {
-        newDataName.setDisable(!newDataName.isDisabled());
-        btnMineNewData.setDisable(!btnMineNewData.isDisabled());
-        nbOfTweets.setDisable(!nbOfTweets.isDisabled());
-
-        existingData.setDisable(!existingData.isDisabled());
-        btnMineExistingData.setDisable(!btnMineExistingData.isDisabled());
-        nbOfExistingTweets.setDisable(!nbOfExistingTweets.isDisabled());
-    } // changeDataSelection ()
-
-    @FXML
-    private void updateNumberOfExistingTweets() {
-        String file = "./src/main/resources/CSV/" + existingData.getValue() + ".csv";
-        try {
-            Integer nbOfLines = countLinesOld(file);
-            nbOfExistingTweets.setText(nbOfLines.toString());
-        } catch (Exception e) {
-            nbOfExistingTweets.setText("Erreur");
-            System.err.println(e.getMessage());
-        }
     }
 }
