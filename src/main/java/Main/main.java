@@ -27,12 +27,12 @@ public class main extends Application {
     public static final String csvFilePath      = "./src/main/resources/CSV/";
     public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
 
-    private static int          numberOfTweets =0;
-    private static int          MAX_QUERIES;
-    private static int          TWEETS_PER_QUERY;
-    public static String        SEARCH_TERM;
+    private static int   numberOfTweets =0;
+    private static int   MAX_QUERIES;
+    private static int   TWEETS_PER_QUERY;
+    public static String SEARCH_TERM;
 
-    private static CSVWriter   writer ;
+    private static CSVWriter writer ;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -46,18 +46,6 @@ public class main extends Application {
     public static void main(String[] args) {
         //Application.launch(args);
     } // main ()
-
-    public static void initializeParams(String searchTerm, int numberOfTweetsMax) {
-        SEARCH_TERM = searchTerm;
-
-        if(numberOfTweetsMax >= 100) {
-            MAX_QUERIES = numberOfTweetsMax / 100;
-            TWEETS_PER_QUERY = 100;
-        } else {
-            MAX_QUERIES = 1;
-            TWEETS_PER_QUERY = numberOfTweetsMax;
-        }
-    } // initializeParams ()
 
     public static void mine(String query, int nbTweets) {
         System.out.println("/!\\ Initializing parameters ...");
@@ -75,6 +63,18 @@ public class main extends Application {
         System.out.println("/!\\ Run apriori ...");
         main.runApriori();
     } // mine ()
+
+    private static void initializeParams(String searchTerm, int numberOfTweetsMax) {
+        SEARCH_TERM = searchTerm;
+
+        if(numberOfTweetsMax >= 100) {
+            MAX_QUERIES = numberOfTweetsMax / 100;
+            TWEETS_PER_QUERY = 100;
+        } else {
+            MAX_QUERIES = 1;
+            TWEETS_PER_QUERY = numberOfTweetsMax;
+        }
+    } // initializeParams ()
 
     private static Collection<String[]> getData(){
         String fileToSaveIn = csvFilePath + SEARCH_TERM + ".csv";
@@ -216,8 +216,6 @@ public class main extends Application {
             c.printStackTrace();
         }
     }
-
-
 
     private static void runApriori() {
         try {
