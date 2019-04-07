@@ -26,6 +26,7 @@ public class main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Scene scene = new Scene(new HomeController());
+        scene.getStylesheets().addAll("css/style.css");
         primaryStage.setTitle("TwitMiner");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -35,7 +36,7 @@ public class main extends Application {
 
         Application.launch(args);
 
-        String storingFile ="./src/main/resources/CSV/tweets.csv";
+        String storingFile ="./src/main/resources/CSV/" + SEARCH_TERM + ".csv";
 
         /////// Undo comments if you want fresh data
         /*
@@ -49,11 +50,11 @@ public class main extends Application {
         System.out.println("/!\\ Creating trans file ...");
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
         String trans = csvToTransConverter.convertToTrans(storingFile);
-        printTrans(trans, "./src/main/resources/trans/tweets.trans");
+        printTrans(trans, "./src/main/resources/trans/" + SEARCH_TERM + ".trans");
         System.out.println("/!\\ trans file created !");
         */
 
-        // !!! \\ Call apriori on trans
+        // !!! \\ Call apriori on trans here. Out file has to be -> "./src/main/resources/out/" + SEARCH_TERM + ".out"
 
         /*
         try {
