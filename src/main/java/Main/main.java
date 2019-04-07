@@ -34,7 +34,7 @@ public class main extends Application {
     private static int   numberOfTweets =0;
     private static int   MAX_QUERIES;
     private static int   TWEETS_PER_QUERY;
-    public static String SEARCH_TERM;
+    public static String search_Term;
 
     private static CSVWriter writer ;
 
@@ -69,29 +69,40 @@ public class main extends Application {
 
         System.out.println("/!\\ out -> csv ...");
         try{
-            FileWriter writer = new FileWriter(outCSV+SEARCH_TERM);
-            writer.append( OutToCSVConverter.convertToCSV("src/main/resources/aprioriOut/"+SEARCH_TERM+".out") );
+            FileWriter writer = new FileWriter(outCSV+ search_Term);
+            writer.append( OutToCSVConverter.convertToCSV("src/main/resources/aprioriOut/"+ search_Term +".out") );
             writer.close();
         }catch (IOException e ){
             e.printStackTrace();
         }
+
 
     } // mine ()
 
 
 
 
-    public static void processData(){
+    public static void processData(int minfLift, Float minFreq, Float minConf,int numberOfTweets, String searchTerm){
+
         if(numberToWords == null){
             unserializeNumberToWords();
         }
-        getData();
-        Extracteur.printToFile(patternFile+SEARCH_TERM+".txt");
+        Extracteur extracteur = Extracteur.getInstance();
+        extracteur.setMinLift(minfLift);
+        extracteur.setMinfreq(minFreq);
+        extracteur.setMinConf(minConf);
+        try{
+            extracteur.analyzePatterns(numberOfTweets,outCSV + searchTerm);
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        Extracteur.printToFile(patternFile+ search_Term +".txt");
 
     }//processData
 
     private static void initializeParams(String searchTerm, int numberOfTweetsMax) {
-        SEARCH_TERM = searchTerm;
+        search_Term = searchTerm;
 
         if(numberOfTweetsMax >= 100) {
             MAX_QUERIES = numberOfTweetsMax / 100;
@@ -103,7 +114,7 @@ public class main extends Application {
     } // initializeParams ()
 
     private static Collection<String[]> getData(){
-        String fileToSaveIn = csvFilePath + SEARCH_TERM + ".csv";
+        String fileToSaveIn = csvFilePath + search_Term + ".csv";
 
         // The factory instance is re-useable and thread safe.
         ConfigurationBuilder cb = new ConfigurationBuilder();
@@ -134,7 +145,7 @@ public class main extends Application {
                     Thread.sleep((searchTweetsRateLimit.getSecondsUntilReset() + 2) * 1000l);
                 }
 
-                Query query = new Query(SEARCH_TERM);
+                Query query = new Query(search_Term);
                 query.setCount(TWEETS_PER_QUERY);
                 query.setLang("fr");
 
@@ -183,7 +194,7 @@ public class main extends Application {
      * @param dictionaryFilePath CSV containing the words to delete
      */
     private static void cleanData(String dictionaryFilePath) {
-        String csvFile = csvFilePath + SEARCH_TERM + ".csv";
+        String csvFile = csvFilePath + search_Term + ".csv";
 
         CSVReader reader = new CSVReader(";");
         ArrayList<String[]> csv = reader.splitCSV(csvFile);
@@ -213,11 +224,11 @@ public class main extends Application {
 
     private static void createTransFile() {
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM + ".csv",
-                transFilePath + SEARCH_TERM +".trans");
+        numberToWords = csvToTransConverter.convertToTrans(csvFilePath + search_Term + ".csv",
+                transFilePath + search_Term +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
+                    new FileOutputStream("src/main/resources/serialized/" + search_Term + "numberToWords");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -230,7 +241,7 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + search_Term + "numberToWords");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();
@@ -245,9 +256,11 @@ public class main extends Application {
 
     private static void runApriori() {
         try {
-            Apriori.run(main.transFilePath + SEARCH_TERM + ".trans",0.6F,  main.aprioriFilePath + SEARCH_TERM + ".out");
+            Apriori.run(main.transFilePath + search_Term + ".trans",0.6F,  main.aprioriFilePath + search_Term + ".out");
         } catch(Exception e){
             e.printStackTrace();
         }
     } // runApriori ()
+
+
 }

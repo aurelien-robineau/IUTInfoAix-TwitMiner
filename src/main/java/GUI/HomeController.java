@@ -14,7 +14,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
 import java.io.*;
-import java.util.Collection;
 
 public class HomeController extends VBox {
 
@@ -167,7 +166,7 @@ public class HomeController extends VBox {
     }
 
     private void displayResults() {
-        String fileName = main.transFilePath + main.SEARCH_TERM + ".trans";
+        String fileName = main.transFilePath + main.search_Term + ".trans";
 
         outputFile.setVisible(true);
 
