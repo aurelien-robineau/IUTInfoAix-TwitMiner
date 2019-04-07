@@ -264,7 +264,7 @@ public class main extends Application {
 
     private static void runApriori() {
         try {
-            Apriori.run(main.transFilePath + search_Term + ".trans",0.6F,  main.aprioriFilePath + search_Term + ".out");
+            Apriori.run(main.transFilePath + search_Term + ".trans",0.3F,  main.aprioriFilePath + search_Term + ".out");
         } catch(Exception e){
             e.printStackTrace();
         }
