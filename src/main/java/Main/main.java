@@ -22,13 +22,13 @@ public class main extends Application {
 
     public static HashMap<Integer, String> numberToWords = new HashMap<Integer, String>();
 
-    private static final String transFilePath    = "./src/main/resources/trans/";
-    private static final String csvFilePath      = "./src/main/resources/CSV/";
-    private static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
+    public static final String transFilePath    = "./src/main/resources/trans/";
+    public static final String csvFilePath      = "./src/main/resources/CSV/";
+    public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
 
     private static int          MAX_QUERIES;
     private static int          TWEETS_PER_QUERY;
-    private static String       SEARCH_TERM;
+    public static String        SEARCH_TERM;
 
     private static CSVWriter   writer ;
 

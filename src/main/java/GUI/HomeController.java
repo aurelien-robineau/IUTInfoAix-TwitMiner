@@ -11,7 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 
 import java.io.*;
 import java.util.Collection;
@@ -47,6 +47,9 @@ public class HomeController extends VBox {
     @FXML
     private ProgressIndicator stepIndicator;
 
+    @FXML
+    private TextArea outputFile;
+
     /**
      * Default constructor
      */
@@ -60,6 +63,8 @@ public class HomeController extends VBox {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
+        outputFile.setVisible(false);
 
         existingData.setDisable(true);
         btnMineExistingData.setDisable(true);
@@ -156,6 +161,8 @@ public class HomeController extends VBox {
             //STEP_MESSAGE.setValue("");
             //stepMessage.setVisible(false);
             //stepIndicator.setVisible(false);
+
+            displayResults();
         }
         else {
             String query = existingData.getValue().toString();
@@ -199,4 +206,24 @@ public class HomeController extends VBox {
 
         existingData.setItems(options);
     }
+
+    private void displayResults() {
+        String fileName = main.transFilePath + main.SEARCH_TERM + ".trans";
+
+        outputFile.setVisible(true);
+
+        String line = "";
+        StringBuilder fileText = new StringBuilder();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            while ((line = br.readLine()) != null) {
+                fileText.append(line);
+                fileText.append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        outputFile.setText(fileText.toString());
+    } // displayResults ()
 }
