@@ -1,9 +1,9 @@
 package GUI;
 
-import DataProcessing.Apriori;
-import FileManagement.CSVToTransConverter;
 import Main.LineCounter;
 import Main.main;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -17,6 +17,8 @@ import java.io.*;
 import java.util.Collection;
 
 public class HomeController extends VBox {
+
+    private StringProperty STEP_MESSAGE = new SimpleStringProperty("");
 
     @FXML
     private CheckBox useOldData;
@@ -40,7 +42,10 @@ public class HomeController extends VBox {
     private Button btnMineExistingData;
 
     @FXML
-    private Label step;
+    private Label stepMessage;
+
+    @FXML
+    private ProgressIndicator stepIndicator;
 
     /**
      * Default constructor
@@ -60,6 +65,13 @@ public class HomeController extends VBox {
         btnMineExistingData.setDisable(true);
         nbOfExistingTweetsField.setDisable(true);
 
+        btnMineNewData.setDisable(true);
+
+        stepMessage.setVisible(false);
+        stepIndicator.setVisible(false);
+
+        stepMessage.textProperty().bind(STEP_MESSAGE);
+
         // Force the field to be numeric only
         nbOfTweetsField.textProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -78,6 +90,27 @@ public class HomeController extends VBox {
             }
         });
 
+        // Cannot mine if field is empty
+        newQuery.textProperty().addListener(new ChangeListener<String>() {
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(newValue.length() > 0) {
+                    btnMineNewData.setDisable(false);
+                } else {
+                    btnMineNewData.setDisable(true);
+                }
+            }
+        });
+
+        existingData.valueProperty().addListener(new ChangeListener<String>() {
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(newValue.length() > 0) {
+                    btnMineExistingData.setDisable(false);
+                } else {
+                    btnMineExistingData.setDisable(true);
+                }
+            }
+        });
+
         updateExistingData();
     } // constructor
 
@@ -87,23 +120,42 @@ public class HomeController extends VBox {
             int nbTweets = Integer.parseInt(nbOfTweetsField.getText());
             String query = newQuery.getText();
 
+            if(query.equals(""))
+                query = "untitled";
+
+            stepMessage.setVisible(true);
+            stepIndicator.setVisible(true);
+
+            System.out.println("/!\\ Initializing parameters ...");
+            STEP_MESSAGE.setValue(" Initialisation des paramètres");
             main.initializeParams(query, nbTweets);
 
+            STEP_MESSAGE.setValue(" Récupération des tweets");
             Collection<String[]> tweets = main.getData();
 
+            STEP_MESSAGE.setValue(" Création du fichier .csv");
             main.printStringToCsv(tweets);
 
             System.out.println("/!\\ Cleaning data ...");
+            STEP_MESSAGE.setValue(" Nettoyage des données");
             main.cleanData("./src/main/resources/dictionary.csv");
 
-            System.out.println("/!\\ Creating trans file ...");
+            System.out.println("/!\\ Creating .trans file ...");
+            STEP_MESSAGE.setValue(" Création du fichier .trans");
             main.createTransFile();
 
+            System.out.println("/!\\ Run apriori ...");
+            STEP_MESSAGE.setValue(" Calcul des motifs fréquents");
             main.runApriori();
 
+            //stepMessage.setText("Extraction des règles d'association");
             //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
 
             updateExistingData();
+
+            //STEP_MESSAGE.setValue("");
+            //stepMessage.setVisible(false);
+            //stepIndicator.setVisible(false);
         }
         else {
             String query = existingData.getValue().toString();
