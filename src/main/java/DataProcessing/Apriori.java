@@ -127,7 +127,7 @@ public class Apriori extends Observable {
     /** outputs a message in Sys.err if not used as library */
     private void log(String message) {
         if (!usedAsLibrary) {
-            System.err.println(message);
+            System.out.println(message);
         }
     }
 

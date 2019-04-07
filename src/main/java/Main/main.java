@@ -44,7 +44,7 @@ public class main extends Application {
     } // start ()
 
     public static void main(String[] args) {
-        //Application.launch(args);
+        Application.launch(args);
     } // main ()
 
     public static void mine(String query, int nbTweets) {

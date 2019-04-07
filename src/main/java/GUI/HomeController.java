@@ -42,9 +42,6 @@ public class HomeController extends VBox {
     private Button btnMineExistingData;
 
     @FXML
-    private ProgressIndicator stepIndicator;
-
-    @FXML
     private TextArea outputFile;
 
     /**
@@ -68,8 +65,6 @@ public class HomeController extends VBox {
         nbOfExistingTweetsField.setDisable(true);
 
         btnMineNewData.setDisable(true);
-
-        stepIndicator.setVisible(false);
 
         // Force the field to be numeric only
         nbOfTweetsField.textProperty().addListener(new ChangeListener<String>() {
@@ -122,14 +117,11 @@ public class HomeController extends VBox {
             if(query.equals(""))
                 query = "untitled";
 
-            stepIndicator.setVisible(true);
-
             main.mine(query, nbTweets);
 
             //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
 
             updateExistingData();
-            stepIndicator.setVisible(false);
             displayResults();
         }
         else {
