@@ -118,14 +118,15 @@ public class HomeController extends VBox {
 
             main.mine(query, nbTweets);
 
-            //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
+            main.processData(1, 0.5F, 0.5F, query);
 
             updateExistingData();
-            displayResults();
+            displayResults(query);
         }
         else {
             String query = existingData.getValue().toString();
-            //Extracteur.getInstance().readData(???, main.aprioriFilePath + query + ".out");
+            main.processData(1, 0.5F, 0.5F, query);
+            displayResults(query);
         }
     } // mine ()
 
@@ -165,8 +166,8 @@ public class HomeController extends VBox {
         existingData.setItems(options);
     }
 
-    private void displayResults() {
-        String fileName = main.transFilePath + main.search_Term + ".trans";
+    private void displayResults(String query) {
+        String fileName = main.patternFile + query + ".txt";
 
         outputFile.setVisible(true);
 

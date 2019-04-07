@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import javax.sound.sampled.Line;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,8 +28,8 @@ public class main extends Application {
     public static final String transFilePath    = "./src/main/resources/trans/";
     public static final String csvFilePath      = "./src/main/resources/CSV/";
     public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
-    public static final String outCSV  = "src/main/resources/outCSV/";
-    public static final String patternFile = "src/main/resources/patterns/";
+    public static final String outCSV           = "src/main/resources/outCSV/";
+    public static final String patternFile      = "src/main/resources/patterns/";
 
 
     private static int   numberOfTweets =0;
@@ -82,7 +83,13 @@ public class main extends Application {
 
 
 
-    public static void processData(int minfLift, Float minFreq, Float minConf,int numberOfTweets, String searchTerm){
+    public static void processData(int minfLift, Float minFreq, Float minConf, String searchTerm){
+        int numberOfTweets = 0;
+        try {
+            numberOfTweets = LineCounter.countLines(transFilePath + searchTerm + ".trans");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if(numberToWords == null){
             unserializeNumberToWords();
@@ -99,7 +106,7 @@ public class main extends Application {
         }
         Extracteur.printToFile(patternFile+ search_Term +".txt");
 
-    }//processData
+    }//processData ()
 
     private static void initializeParams(String searchTerm, int numberOfTweetsMax) {
         search_Term = searchTerm;
@@ -228,7 +235,7 @@ public class main extends Application {
                 transFilePath + search_Term +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/" + search_Term + "numberToWords");
+                    new FileOutputStream("src/main/resources/serialized/" + search_Term + "_numberToWords.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -241,7 +248,7 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + search_Term + "numberToWords");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + search_Term + "_numberToWords.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();

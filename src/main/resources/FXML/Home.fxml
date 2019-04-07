@@ -5,12 +5,12 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -79,23 +79,10 @@
             </HBox>
          </children>
       </VBox>
-      <HBox alignment="BOTTOM_CENTER" prefHeight="51.0" prefWidth="600.0">
-         <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="471.0">
-               <children>
-                  <ProgressIndicator fx:id="stepIndicator" prefHeight="20.0" prefWidth="20.0" />
-                  <Label fx:id="stepMessage" maxWidth="570.0" minWidth="0.0" prefHeight="20.0" textFill="WHITE">
-                     <font>
-                        <Font name="Microsoft JhengHei" size="15.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
+      <Pane prefHeight="30.0" prefWidth="200.0" />
       <HBox alignment="BOTTOM_CENTER" prefHeight="300.0" prefWidth="200.0">
          <children>
-            <TextArea fx:id="outputFile" prefHeight="300.0" prefWidth="471.0"/>
+            <TextArea fx:id="outputFile" prefHeight="300.0" prefWidth="471.0" />
          </children>
       </HBox>
     </children>
