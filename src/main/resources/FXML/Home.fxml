@@ -50,6 +50,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                   <TextField fx:id="nbOfTweets" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="10000">
+                       <font>
+                           <Font size="15.0" />
+                       </font>
+                   </TextField>
                </children>
             </HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="54.0" prefWidth="596.0">
@@ -63,6 +68,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <TextField fx:id="nbOfExistingTweets" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;" text="10000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
                </children>
             </HBox>
          </children>
