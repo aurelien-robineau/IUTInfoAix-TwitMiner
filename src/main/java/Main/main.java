@@ -54,20 +54,20 @@ public class main extends Application {
 
     public static void mine(String query, int nbTweets) {
         System.out.println("/!\\ Initializing parameters ...");
-        main.initializeParams(query, nbTweets);
+        initializeParams(query, nbTweets);
 
         System.out.println("/!\\ Getting data ...");
         Collection<String[]> tweets = main.getData();
 
-        main.printStringToCsv(tweets);
+        printStringToCsv(tweets);
 
         System.out.println("/!\\ Cleaning data ...");
-        main.cleanData("./src/main/resources/dictionary.csv");
+        cleanData("./src/main/resources/dictionary.csv");
 
-        main.createTransFile();
+        createTransFile();
 
         System.out.println("/!\\ Run apriori ...");
-        main.runApriori();
+        runApriori();
 
         System.out.println("/!\\ out -> csv ...");
         try{
