@@ -1,5 +1,6 @@
 package FileManagement;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,7 +11,7 @@ public class CSVToTransConverter {
      * @param csvFilePath Path of the csv file to convert
      * @return Converted file
      */
-    public String convertToTrans(String csvFilePath) {
+    public  HashMap<String, Integer> convertToTrans(String csvFilePath, String whereToPrint) {
         CSVReader reader = new CSVReader(";");
         ArrayList<String[]> splitCSV = reader.splitCSV(csvFilePath);
 
@@ -33,7 +34,10 @@ public class CSVToTransConverter {
 
             }
         }
-        return splitTransToString(splitTrans);
+
+
+        printTrans(splitTransToString(splitTrans), whereToPrint);
+        return knownWords;
     } // convertToTrans ()
 
     /**
@@ -41,7 +45,7 @@ public class CSVToTransConverter {
      * @param splitTrans Split trans file
      * @return trans file
      */
-    private String splitTransToString(ArrayList<ArrayList<Integer>> splitTrans) {
+    private static String splitTransToString(ArrayList<ArrayList<Integer>> splitTrans) {
         StringBuilder fileStr = new StringBuilder();
         for (ArrayList<Integer> line: splitTrans) {
             for (Integer word: line) {
@@ -52,4 +56,16 @@ public class CSVToTransConverter {
 
         return fileStr.toString();
     } // splitTransToString ()
+
+    private static void printTrans(String toPrint, String filename){
+        try{
+            PrintWriter transOutput = new PrintWriter(filename);
+            transOutput.println(toPrint);
+            transOutput.close();
+        } catch(Exception e ){
+            e.printStackTrace();
+        }
+    } // printTrans ()
+
+
 }

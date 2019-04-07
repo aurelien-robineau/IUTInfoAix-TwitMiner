@@ -15,9 +15,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 public class main extends Application {
+
+    public static HashMap<String, Integer> knownWords = new HashMap<String, Integer>();
     private static final int    MAX_QUERIES	     = 100;
     private static final int    TWEETS_PER_QUERY = 100;
     private static final String SEARCH_TERM      = "Esport";
@@ -51,6 +54,11 @@ public class main extends Application {
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
         String trans = csvToTransConverter.convertToTrans(storingFile);
         printTrans(trans, "./src/main/resources/trans/" + SEARCH_TERM + ".trans");
+        System.out.println("/!\\ trans file created !");
+
+        System.out.println("/!\\ Creating trans file ...");
+        CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
+        knownWords = csvToTransConverter.convertToTrans(storingFile);
         System.out.println("/!\\ trans file created !");
         */
 /*
