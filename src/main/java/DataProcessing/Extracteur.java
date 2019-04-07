@@ -117,7 +117,6 @@ public class Extracteur {
                     System.out.println("number does not match with anything");
                     e.printStackTrace();
                 }
-
             }
         }
         //vérification du lift
@@ -170,14 +169,36 @@ public class Extracteur {
         StringBuilder s = new StringBuilder();
 
         for(Map.Entry<Pair, Pair> entry : patternConfLift.entrySet() ) {
-            s.append(entry.getKey().getFirst().toString() );
-            s.append("-->");
-            s.append(entry.getKey().getSecond().toString() );
-            s.append(" confiance : ");
-            s.append(entry.getValue().getFirst());
-            s.append(" Lift : ");
-            s.append(entry.getValue().getSecond());
-            s.append('\n');
+
+
+
+
+
+            try{
+
+                ArrayList<String> x;
+                x = (ArrayList<String>) entry.getKey().getSecond();
+
+                s.append(x.toString() );
+                s.append("-->");
+
+                String yMinusX = entry.getKey().getFirst().toString();
+
+                for( String unit : x){
+                    yMinusX= yMinusX.replace(unit,"");
+                }
+                s.append(entry.getKey().getFirst().toString() );
+                s.append(" confiance : ");
+                s.append(entry.getValue().getFirst());
+                s.append(" Lift : ");
+                s.append(entry.getValue().getSecond());
+                s.append('\n');
+
+            }catch (ClassCastException e){
+                System.out.println("cast exception");
+                e.printStackTrace();
+            }
+
 
 
         }
