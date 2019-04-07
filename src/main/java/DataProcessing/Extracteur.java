@@ -86,6 +86,7 @@ public class Extracteur {
 
             //we search patterns for interresting rules
             for (ArrayList<Integer> combination : combinationFinder(entry.getKey())) {
+                Collections.sort(combination);
                 try{
 
                     Float conf = entry.getValue()/freqPattern.get(combination);
@@ -110,6 +111,7 @@ public class Extracteur {
 
                     }
                 }catch (NullPointerException e){
+                    System.out.println(combination);
                     System.out.println("number does not match with anything");
                     e.printStackTrace();
                 }
