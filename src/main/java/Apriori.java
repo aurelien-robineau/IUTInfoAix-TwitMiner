@@ -1,3 +1,5 @@
+
+
 import java.io.*;
 import java.util.*;
 
@@ -22,15 +24,17 @@ import java.util.*;
  * and imposing this condition on any subsequent users.
  */
 public class Apriori extends Observable {
-    public static BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+    public static BufferedWriter writer ;
 
 
-    public static void main(String[] args) throws Exception {
+    public static void run(String sourceFile, Float supportPrecentage, String targetFile) throws Exception {
         String[] arguments = new String[2];
-        arguments[0] = "test.txt";
-        arguments[1] = "0.5";
+        arguments[0] = sourceFile;
+        arguments[1] = supportPrecentage.toString();
+        writer = new BufferedWriter(new FileWriter(targetFile));
 
         Apriori ap = new Apriori(arguments);
+        writer.close();
     }
 
     /** the list of current itemsets */
@@ -84,7 +88,6 @@ public class Apriori extends Observable {
             if(itemsets.size()!=0)
             {
                 nbFrequentSets+=itemsets.size();
-                log("Found "+itemsets.size()+" frequent itemsets of size " + itemsetNumber + " (with support "+(minSup*100)+"%)");;
                 createNewItemsetsFromPreviousOnes();
             }
 
@@ -93,9 +96,6 @@ public class Apriori extends Observable {
 
         //display the execution time
         long end = System.currentTimeMillis();
-        log("Execution time is: "+((double)(end-start)/1000) + " seconds.");
-        log("Found "+nbFrequentSets+ " frequents sets for support "+(minSup*100)+"% (absolute "+Math.round(numTransactions*minSup)+")");
-        log("Done");
     }
 
     /** triggers actions if a frequent item set has been found  */
@@ -105,10 +105,21 @@ public class Apriori extends Observable {
             notifyObservers(itemset);
         }
         else {
+            StringBuilder line = new StringBuilder();
             for( int item : itemset){
-                System.out.print(item +" ");
+                line.append(item );
+                line.append(" ");
+
             }
-            System.out.print( "  ("+support+")"+ '\n');
+            line.append("(");
+            line.append(support);
+            line.append(")\n");
+            try{
+                writer.write(line.toString());
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+
 
         }
     }
@@ -149,17 +160,9 @@ public class Apriori extends Observable {
             }
         }
 
-        outputConfig();
 
     }
 
-    /** outputs the current configuration
-     */
-    private void outputConfig() {
-        //output config info to the user
-        log("Input configuration: "+numItems+" items, "+numTransactions+" transactions, ");
-        log("minsup = "+minSup+"%");
-    }
 
     /** puts in itemsets all sets of size 1,
      * i.e. all possibles items of the datasets
