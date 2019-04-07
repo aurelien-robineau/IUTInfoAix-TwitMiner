@@ -12,12 +12,16 @@ import java.util.Set;
 
 public class Extracteur {
     // properties
-    private Map<Pair, Float> confs =new HashMap<Pair, Float>();
     private Float minConf =0F;
+    private Float minfreq =0F;
+    private int minLift =0;
+    // eg : key{first : X , second : Y-X}, value( first: confiance, second: lift)
+    private Map<Pair, Pair> patternConfLift = new HashMap<Pair, Pair>();
     private Map<ArrayList<Integer>,Float> freqPattern  = new HashMap<ArrayList<Integer>, Float>();
     private static Extracteur instance ;
 
-    // etters an setters
+
+    // getters an setters
     public Float getMinConf() {
         return minConf;
     }
@@ -26,25 +30,39 @@ public class Extracteur {
         this.minConf = minConf;
     }
 
+    public int getMinLift() {
+        return minLift;
+    }
+
+    public void setMinLift(int minLift) {
+        this.minLift = minLift;
+    }
+    public Float getMinfreq() {
+        return minfreq;
+    }
+
+    public void setMinfreq(Float minfreq) {
+        this.minfreq = minfreq;
+    }
+
     // constructor
     private Extracteur() {}
 
     // singleton getter
     public static   Extracteur getInstance(){
         if(instance == null){
-            return new Extracteur();
-        }else{
-            return instance;
+            instance = new Extracteur();
         }
+        return instance;
     }
 
     /**
-     * read data from the output of apriori as a csv
+     * read data from the output of apriori as a csv and analyze it with frequency, "confiance", and lift
      * @param nbElements
      * @return
      * @throws IOException
      */
-    public void readData(int nbElements, String file) throws IOException {
+    public void analyzePatterns(int nbElements, String file) throws IOException {
 
         String[] stringContent;
 
@@ -76,15 +94,20 @@ public class Extracteur {
         // creating rules
         for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
             //if there can't be any subunit it's not interresting
-            if (entry.getKey().size() < 1) continue;
+            if (entry.getKey().size() < 1 || entry.getValue() < minfreq ) continue;
 
             //we search patterns for interresting rules
             for (ArrayList<Integer> combination : combinationFinder(entry.getKey())) {
                 try{
                     Float conf = entry.getValue()/freqPattern.get(combination);
+                    if(conf >=minConf ){
+                        Float lift = conf / entry.getValue();
+                        if(lift >= minLift){
+                            patternConfLift.put(new Pair(main.numberToWords.get(entry.getKey()),
+                                            main.numberToWords.get(combination)),
+                                    new Pair(conf,lift));
+                        }
 
-                    if(conf >=minConf){
-                        confs.put(new Pair(main.numberToWords.get(entry.getKey()),main.numberToWords.get(combination)),conf);
                     }
                 }catch (NullPointerException e){
                     System.out.println("number does not match with anything");
@@ -93,7 +116,10 @@ public class Extracteur {
 
             }
         }
-    } // readData ()
+        //vérification du lift
+
+
+    } // analyzePatterns ()
 
     /**
      * find all combinations with the given numbers
@@ -119,8 +145,8 @@ public class Extracteur {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append("conf :");
-        s.append(confs);
+        s.append("patternConfLift :");
+        s.append(patternConfLift);
         s.append("\n\n freqPatterns :");
         s.append(freqPattern);
         s.append("\n\nmin conf :");
