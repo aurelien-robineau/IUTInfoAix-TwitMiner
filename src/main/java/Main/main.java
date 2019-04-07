@@ -12,8 +12,7 @@ import javafx.stage.Stage;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -206,7 +205,34 @@ public class main extends Application {
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
         numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM + ".csv",
                 transFilePath + SEARCH_TERM +".trans");
+        try{
+            FileOutputStream fos =
+                    new FileOutputStream("src/main/resources/serialized/numberToWords");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(numberToWords);
+            oos.close();
+            fos.close();
+        }catch(IOException ioe)
+        {
+            ioe.printStackTrace();
+        }
     } // createTransFile
+
+    public static void unserializeNumberToWords(){
+        try {
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/numberToWords");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            numberToWords = (HashMap) ois.readObject();
+            ois.close();
+            fis.close();
+        }catch(IOException ioe) {
+            ioe.printStackTrace();
+        }catch(ClassNotFoundException c) {
+            System.out.println("Class not found");
+            c.printStackTrace();
+        }
+    }
+
 
     public static void runApriori() {
         try {
