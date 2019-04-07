@@ -59,38 +59,24 @@ public class main extends Application {
         }
     } // initializeParams ()
 
-    /*
-    public static void getFreshData(String searchTerm, int numberOfTweetsMax){
-        SEARCH_TERM = searchTerm;
+    public static void mine(String query, int nbTweets) {
+        System.out.println("/!\\ Initializing parameters ...");
+        main.initializeParams(query, nbTweets);
 
-        if(numberOfTweetsMax >= 100) {
-            MAX_QUERIES = numberOfTweetsMax / 100;
-            TWEETS_PER_QUERY = 100;
-        } else {
-            MAX_QUERIES = 1;
-            TWEETS_PER_QUERY = numberOfTweetsMax;
-        }
+        Collection<String[]> tweets = main.getData();
 
-        Collection<String[]> tweets = getData(csvFilePath + SEARCH_TERM + ".csv");
-
-        printStringToCsv(tweets);
+        main.printStringToCsv(tweets);
 
         System.out.println("/!\\ Cleaning data ...");
-        cleanData(csvFilePath+SEARCH_TERM +".csv", "./src/main/resources/dictionary.csv");
+        main.cleanData("./src/main/resources/dictionary.csv");
 
-        System.out.println("/!\\ Creating trans file ...");
-        CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM +".csv",
-                transFilePath + SEARCH_TERM +".trans");
-        try {
-            Apriori.run(transFilePath + SEARCH_TERM + ".trans",0.6F,  aprioriFilePath + SEARCH_TERM + ".out");
-        } catch(Exception e){
-            e.printStackTrace();
-        }
-    } // getFreshData ()
-    */
+        main.createTransFile();
 
-    public static Collection<String[]> getData(){
+        System.out.println("/!\\ Run apriori ...");
+        main.runApriori();
+    } // mine ()
+
+    private static Collection<String[]> getData(){
         String fileToSaveIn = csvFilePath + SEARCH_TERM + ".csv";
 
         // The factory instance is re-useable and thread safe.
@@ -170,7 +156,7 @@ public class main extends Application {
      * Clean the tweets
      * @param dictionaryFilePath CSV containing the words to delete
      */
-    public static void cleanData(String dictionaryFilePath) {
+    private static void cleanData(String dictionaryFilePath) {
         String csvFile = csvFilePath + SEARCH_TERM + ".csv";
 
         CSVReader reader = new CSVReader(";");
@@ -188,7 +174,7 @@ public class main extends Application {
         }
     } // cleanData ()
 
-    public static void printStringToCsv(Collection<String[]> tweetCollection){
+    private static void printStringToCsv(Collection<String[]> tweetCollection){
         try {
             for(String[] tweet : tweetCollection){
                 writer.writeNext(tweet);
@@ -199,13 +185,13 @@ public class main extends Application {
         }
     } // printStringToCSV
 
-    public static void createTransFile() {
+    private static void createTransFile() {
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
         numberToWords = csvToTransConverter.convertToTrans(csvFilePath + SEARCH_TERM + ".csv",
                 transFilePath + SEARCH_TERM +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/"+SEARCH_TERM+"numberToWords");
+                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -218,7 +204,7 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/"+SEARCH_TERM+"numberToWords");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();
@@ -233,7 +219,7 @@ public class main extends Application {
 
 
 
-    public static void runApriori() {
+    private static void runApriori() {
         try {
             Apriori.run(main.transFilePath + SEARCH_TERM + ".trans",0.6F,  main.aprioriFilePath + SEARCH_TERM + ".out");
         } catch(Exception e){
