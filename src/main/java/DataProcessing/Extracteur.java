@@ -186,17 +186,12 @@ public class Extracteur {
     } // toString ()
 
     public static void printToFile(String filename){
-        try{
+        try {
             FileWriter writer = new FileWriter(filename);
             writer.write(instance.toString());
-        }catch(Exception e ){
+        } catch(Exception e ){
             e.printStackTrace();
         }
-
-
-
     }
-
-
 }
 

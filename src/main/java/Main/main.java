@@ -191,7 +191,7 @@ public class main extends Application {
                 transFilePath + SEARCH_TERM +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords");
+                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -204,7 +204,7 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();
