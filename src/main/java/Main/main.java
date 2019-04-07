@@ -2,6 +2,7 @@ package Main;
 
 import DataCleaning.DataCleaner;
 import DataProcessing.Apriori;
+import DataProcessing.Extracteur;
 import FileManagement.CSVReader;
 import FileManagement.CSVToTransConverter;
 import GUI.HomeController;
@@ -26,6 +27,7 @@ public class main extends Application {
     public static final String csvFilePath      = "./src/main/resources/CSV/";
     public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
 
+    private static int          numberOfTweets =0;
     private static int          MAX_QUERIES;
     private static int          TWEETS_PER_QUERY;
     public static String        SEARCH_TERM;
@@ -42,7 +44,7 @@ public class main extends Application {
     } // start ()
 
     public static void main(String[] args) {
-        Application.launch(args);
+        //Application.launch(args);
     } // main ()
 
     public static void initializeParams(String searchTerm, int numberOfTweetsMax) {
@@ -102,7 +104,7 @@ public class main extends Application {
         Twitter twitter = tf.getInstance();
 
         long maxID = -1;
-        int totalTweets =0;
+
         Collection<String[]> resultat = new ArrayList<String[]>();
         try {
             // Initialize csv writer
@@ -115,12 +117,8 @@ public class main extends Application {
             RateLimitStatus searchTweetsRateLimit = rateLimitStatus.get("/search/tweets");
 
             for (int queryNumber = 0; queryNumber < MAX_QUERIES; queryNumber++) {
-                System.out.printf("/!\\ Starting loop %d\n", queryNumber);
 
                 if (searchTweetsRateLimit.getRemaining() == 0) {
-
-                    System.out.printf("/!\\ Sleeping for %d seconds due to rate limits\n", searchTweetsRateLimit.getSecondsUntilReset());
-
                     Thread.sleep((searchTweetsRateLimit.getSecondsUntilReset() + 2) * 1000l);
                 }
 
@@ -139,7 +137,7 @@ public class main extends Application {
 
                 // Print all the results in a file
                 for (Status status : result.getTweets()) {
-                    ++totalTweets;
+                    ++numberOfTweets;
                     if (maxID == -1 || status.getId() < maxID) {
                         maxID = status.getId();
                     }
@@ -160,7 +158,7 @@ public class main extends Application {
                 /////// End fetch and select ///////////
             }
 
-            System.out.println("/!\\ " + totalTweets + " tweets lus.");
+            System.out.println("/!\\ " + numberOfTweets + " tweets lus.");
         } catch(Exception exc){
             exc.printStackTrace();
         }
@@ -207,7 +205,7 @@ public class main extends Application {
                 transFilePath + SEARCH_TERM +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/numberToWords");
+                    new FileOutputStream("src/main/resources/serialized/"+SEARCH_TERM+"numberToWords");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -220,7 +218,7 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/numberToWords");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/"+SEARCH_TERM+"numberToWords");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();
@@ -232,6 +230,7 @@ public class main extends Application {
             c.printStackTrace();
         }
     }
+
 
 
     public static void runApriori() {
