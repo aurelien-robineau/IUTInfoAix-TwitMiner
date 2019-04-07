@@ -30,13 +30,32 @@
             </Label>
          </children>
       </HBox>
-      <VBox alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="596.0">
+      <VBox alignment="BOTTOM_CENTER" prefHeight="175.0" prefWidth="600.0">
          <children>
             <CheckBox fx:id="useOldData" mnemonicParsing="false" onAction="#changeDataSelection" prefHeight="36.0" prefWidth="230.0" text="Utiliser des données existantes" textFill="WHITE">
                <font>
                   <Font name="Microsoft JhengHei" size="14.0" />
                </font>
             </CheckBox>
+            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" style="-fx-spacing: 5;">
+               <children>
+                  <TextField fx:id="minFreq" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="100.0" promptText="Min Freq" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="minConf" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="100.0" promptText="Min Conf" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="minLift" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="100.0" promptText="Min Lift" style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="46.0" prefWidth="596.0">
                <children>
                     <TextField fx:id="newQuery" prefHeight="42.0" prefWidth="346.0" promptText="Recherche Twitter ..." style="-fx-background-color: #292929; -fx-text-fill: white; -fx-background-radius: 0;">

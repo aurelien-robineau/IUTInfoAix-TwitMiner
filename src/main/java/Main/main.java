@@ -56,6 +56,7 @@ public class main extends Application {
         System.out.println("/!\\ Initializing parameters ...");
         main.initializeParams(query, nbTweets);
 
+        System.out.println("/!\\ Getting data ...");
         Collection<String[]> tweets = main.getData();
 
         main.printStringToCsv(tweets);

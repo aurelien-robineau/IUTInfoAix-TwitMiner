@@ -1,0 +1,1196 @@
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST"]-->["Sun", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Sun", "Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["Sun", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST"]-->["Sun", "Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Sun", "Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun", "Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun", "Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Apr", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["Sun", "Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["Sun", "Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["Sun", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "2019", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019"]-->["07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["07", "CEST", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019"]-->["Apr", "07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019"]-->["Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Sun", "Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019"]-->["Sun", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019", "0"]-->["Sun", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "2019"]-->["Sun", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "0"]-->["Sun", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019"]-->["2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "2019", "0"]-->["Sun", "Apr", "07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "CEST", "2019"]-->["Sun", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "2019", "0"]-->["Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "CEST", "2019", "0"]-->["07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["Apr", "07"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun", "07", "2019"] confiance : 1.0 Lift : 1.0012331
+["07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST"]-->["07", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07", "CEST", "2019"]-->["Apr", "2019"] confiance : 1.0 Lift : 1.0012331
+["Apr", "0"]-->["Apr"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Apr", "07"]-->["07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "CEST", "2019", "0"]-->["CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019", "0"]-->["Sun"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "07", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019"]-->["Sun", "Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019"]-->["Sun"] confiance : 1.0 Lift : 1.0012331
+["Sun", "2019", "0"]-->["Sun", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["Sun", "Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "CEST", "2019", "0"]-->["Sun", "CEST", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "2019"]-->["Apr"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["07", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "2019"]-->["Apr", "07"] confiance : 1.0 Lift : 1.0012331
+["Apr", "CEST", "2019", "0"]-->["Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "2019", "0"]-->["07", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "2019", "0"]-->["Sun", "Apr", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "CEST", "2019", "0"]-->["2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST"]-->["Sun", "Apr", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "0"]-->["07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "CEST", "0"]-->["Apr", "07", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019"]-->["Sun", "CEST"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019", "0"]-->["Sun", "Apr", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "07", "CEST", "2019"]-->["07", "CEST", "2019"] confiance : 1.0 Lift : 1.0012331
+["Sun", "Apr", "CEST", "2019", "0"]-->["Sun", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["07", "2019", "0"]-->["2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "CEST", "0"]-->["Apr", "CEST", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "CEST", "2019", "0"]-->["CEST", "2019", "0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "Apr", "CEST", "2019", "0"]-->["Apr", "0"] confiance : 1.0 Lift : 1.3117932
+["Apr", "07", "CEST", "2019", "0"]-->["Apr", "07", "CEST"] confiance : 0.76325524 Lift : 1.001233
+["Apr", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "CEST", "2019", "0"]-->["Sun", "07", "2019"] confiance : 0.76325524 Lift : 1.001233
+["Sun", "Apr", "07", "2019", "0"]-->["0"] confiance : 1.0 Lift : 1.3117932
+["Sun", "07", "2019", "0"]-->

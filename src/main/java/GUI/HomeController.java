@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class HomeController extends VBox {
 
@@ -21,6 +22,15 @@ public class HomeController extends VBox {
 
     @FXML
     private CheckBox useOldData;
+
+    @FXML
+    private TextField minFreq;
+
+    @FXML
+    private TextField minConf;
+
+    @FXML
+    private TextField minLift;
 
     @FXML
     private TextField newQuery;
@@ -65,23 +75,7 @@ public class HomeController extends VBox {
 
         btnMineNewData.setDisable(true);
 
-        // Force the field to be numeric only
-        nbOfTweetsField.textProperty().addListener(new ChangeListener<String>() {
-            public void changed(ObservableValue<? extends String> observable, String oldValue,
-                                String newValue) {
-                if (!newValue.matches("\\d*")) {
-                    nbOfTweetsField.setText(newValue.replaceAll("[^\\d]", ""));
-                }
-                // Avoid empty text
-                if (newValue.equals("")) {
-                    nbOfTweetsField.setText("0");
-                }
-                // Delete first 0
-                if (newValue.length() > 1 && newValue.substring(0,1).equals("0")) {
-                    nbOfTweetsField.setText(newValue.substring(1,newValue.length()));
-                }
-            }
-        });
+        forceNumerics();
 
         // Cannot mine if field is empty
         newQuery.textProperty().addListener(new ChangeListener<String>() {
@@ -118,14 +112,22 @@ public class HomeController extends VBox {
 
             main.mine(query, nbTweets);
 
-            main.processData(1, 0.5F, 0.5F, query);
+            minLift.setText(minLift.getText().equals("") ? "1" : minLift.getText());
+            minConf.setText(minConf.getText().equals("") ? "0.5" : minConf.getText());
+            minFreq.setText(minFreq.getText().equals("") ? "0.1" : minFreq.getText());
+            main.processData(Integer.parseInt(minLift.getText()), Float.parseFloat(minFreq.getText()), Float.parseFloat(minConf.getText()), query);
 
             updateExistingData();
             displayResults(query);
         }
         else {
             String query = existingData.getValue().toString();
-            main.processData(1, 0.5F, 0.5F, query);
+
+            minLift.setText(minLift.getText().equals("") ? "1" : minLift.getText());
+            minConf.setText(minConf.getText().equals("") ? "0.5" : minConf.getText());
+            minFreq.setText(minFreq.getText().equals("") ? "0.1" : minFreq.getText());
+            main.processData(Integer.parseInt(minLift.getText()), Float.parseFloat(minFreq.getText()), Float.parseFloat(minConf.getText()), query);
+
             displayResults(query);
         }
     } // mine ()
@@ -185,4 +187,33 @@ public class HomeController extends VBox {
 
         outputFile.setText(fileText.toString());
     } // displayResults ()
+
+    private void forceNumerics() {
+        ArrayList<TextField> textFields = new ArrayList<>();
+        textFields.add(minFreq);
+        textFields.add(minConf);
+        textFields.add(minLift);
+        textFields.add(nbOfTweetsField);
+
+        for(TextField textField: textFields) {
+            // Force the field to be numeric only
+            textField.textProperty().addListener(new ChangeListener<String>() {
+                public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                    String newValue) {
+                    /*
+                    if (!newValue.matches("\\d*")) {
+                        textField.setText(newValue.replaceAll("[^\\d]", ""));
+                    }*/
+                    // Avoid empty text
+                    if (newValue.equals("")) {
+                        textField.setText("0");
+                    }
+                    // Delete first 0
+                    if (newValue.length() > 1 && newValue.substring(0,1).equals("0") && !newValue.substring(1,2).equals(".")) {
+                        textField.setText(newValue.substring(1,newValue.length()));
+                    }
+                }
+            });
+        }
+    } // forceNumerics ()
 }
