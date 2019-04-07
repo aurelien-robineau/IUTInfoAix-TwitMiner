@@ -22,23 +22,13 @@ public class Extracteur {
 
 
     // getters an setters
-    public Float getMinConf() {
-        return minConf;
-    }
-
     public void setMinConf(Float minConf) {
         this.minConf = minConf;
     }
 
-    public int getMinLift() {
-        return minLift;
-    }
 
     public void setMinLift(int minLift) {
         this.minLift = minLift;
-    }
-    public Float getMinfreq() {
-        return minfreq;
     }
 
     public void setMinfreq(Float minfreq) {
@@ -103,9 +93,19 @@ public class Extracteur {
                     if(conf >=minConf ){
                         Float lift = conf / entry.getValue();
                         if(lift >= minLift){
-                            patternConfLift.put(new Pair(main.numberToWords.get(entry.getKey()),
-                                            main.numberToWords.get(combination)),
-                                    new Pair(conf,lift));
+                            //pattern Y
+                            String[] y = new String[entry.getKey().size()];
+                            for(int i = 0; i<entry.getKey().size(); ++i){
+                                y[i] = main.numberToWords.get(entry.getKey().get(i));
+                            }
+
+                            //pattern x
+                            String[] x = new String[combination.size()];
+                            for(int i = 0; i<entry.getKey().size(); ++i){
+                                x[i] = main.numberToWords.get(combination.get(i));
+                            }
+
+                            patternConfLift.put(new Pair(y, x), new Pair(conf,lift));
                         }
 
                     }
@@ -140,7 +140,26 @@ public class Extracteur {
         combinations.remove(0);
 
         return combinations;
-    } // combinationFinder ()
+    } // combinationFinder
+
+    /**
+     * turn freqMotif into a HashMap<String[], Float> with the help of numberToWords wich is a variable telling
+     * us what number correspond with wath word
+     * @return freqMotif avec pour clé les mots à la place des int
+     */
+    public  HashMap<String[], Float> freqStringMotif(){
+
+        HashMap<String[], Float> result = new HashMap<String[], Float>();
+        //go over all the keys of
+        for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
+            String[] key = new String[entry.getKey().size()];
+            for(int i = 0 ; i<entry.getKey().size(); ++i){
+                key[i] = main.numberToWords.get(entry.getKey().get(i));
+            }
+            result.put(key,entry.getValue());
+        }
+        return result;
+    }
 
     @Override
     public String toString() {
@@ -155,47 +174,6 @@ public class Extracteur {
         return s.toString();
     } // toString ()
 
-    /*
-    /**
-     * remplie conf
-     * @param motifs
-     * @return
-     */
-    /*
-    private static Map< Main.Pair<ArrayList<Integer>, ArrayList<Integer>>, Float> conf(Map<ArrayList<Integer>,Float> motifs) {
 
-        Main.Pair<ArrayList<Integer>, ArrayList<Integer>> test ;
-        Map< HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> confs = new HashMap<HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float>();
-
-        ArrayList<Integer> biggestKey = new ArrayList<Integer>();
-        for (Map.Entry <ArrayList<Integer>, Float> entry : motifs.entrySet()) {
-            if(entry.getKey().size() > biggestKey.size()) {
-                biggestKey = entry.getKey();
-            }
-        }
-
-        for (Map.Entry <ArrayList<Integer>, Float> entry : motifs.entrySet()) {
-            float conf = motifs.get(biggestKey) / entry.getValue();
-
-            HashMap<ArrayList<Integer>, ArrayList<Integer>> key = new HashMap<ArrayList<Integer>, ArrayList<Integer>>();
-            key.put(entry.getKey(), biggestKey);
-            confs.put(key, conf);
-        }
-
-        // AFFICHAGE
-        for (Map.Entry <HashMap<ArrayList<Integer>, ArrayList<Integer>>, Float> entry : confs.entrySet()) {
-            HashMap<ArrayList<Integer>, ArrayList<Integer>> key = entry.getKey();
-            for (Map.Entry <ArrayList<Integer>, ArrayList<Integer>> assos: key.entrySet()) {
-                System.out.print(assos.getKey());
-                System.out.print(" -> ");
-                System.out.print(assos.getValue());
-            }
-            System.out.print(" = ");
-            System.out.println(entry.getValue());
-        }
-
-        return confs;
-    }
-*/
 }
 
