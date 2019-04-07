@@ -200,10 +200,10 @@ public class HomeController extends VBox {
             textField.textProperty().addListener(new ChangeListener<String>() {
                 public void changed(ObservableValue<? extends String> observable, String oldValue,
                                     String newValue) {
-                    /*
-                    if (!newValue.matches("\\d*")) {
-                        textField.setText(newValue.replaceAll("[^\\d]", ""));
-                    }*/
+
+                    if (!newValue.matches("(?<=^| )\\d+(\\.\\d+)?(?=$| )")) {
+                        textField.setText(newValue.replaceAll("[^0-9.]", ""));
+                    }
                     // Avoid empty text
                     if (newValue.equals("")) {
                         textField.setText("0");
