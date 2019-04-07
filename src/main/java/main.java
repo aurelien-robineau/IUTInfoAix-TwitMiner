@@ -20,7 +20,7 @@ import java.util.Map;
 public class main extends Application {
     private static final int    MAX_QUERIES	     = 100;
     private static final int    TWEETS_PER_QUERY = 100;
-    private static final String SEARCH_TERM      = "esport";
+    private static final String SEARCH_TERM      = "Esport";
     private static CSVWriter    writer ;
 
     @Override
@@ -53,7 +53,13 @@ public class main extends Application {
         printTrans(trans, "./src/main/resources/trans/" + SEARCH_TERM + ".trans");
         System.out.println("/!\\ trans file created !");
         */
-
+/*
+        try {
+            Process process = new ProcessBuilder("./src/main/resources/apriori.exe","./src/main/resources/trans/" + SEARCH_TERM + ".trans","2", "./src/main/resources/out/" + SEARCH_TERM + ".out").start();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+*/
         // !!! \\ Call apriori on trans here. Out file has to be -> "./src/main/resources/out/" + SEARCH_TERM + ".out"
 
         /*
@@ -70,7 +76,7 @@ public class main extends Application {
             e.printStackTrace();
         }
         */
-    }
+    } // main ()
 
     private static Collection<String[]> getData(String fileToSaveIn){
         // The factory instance is re-useable and thread safe.
@@ -169,7 +175,7 @@ public class main extends Application {
         } catch(Exception exc){
             exc.printStackTrace();
         }
-    } // cleanData
+    } // cleanData ()
 
     private static void printStringToCsv(Collection<String[]> tweetCollection){
         try {
