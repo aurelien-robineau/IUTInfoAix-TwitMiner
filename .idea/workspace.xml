@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57316f4e-2e9b-45db-89c8-0610fbcda25c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,10 +27,10 @@
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="-255">
               <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,11 +41,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSVToTransConverter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CSVToTransConverter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="-68">
+              <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#649#666#0" expanded="true" />
+                <element signature="e#1450#1467#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,12 +100,12 @@
         <option value="$PROJECT_DIR$/src/main/java/FileManagement/CSVReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileManagement/OutToCSVConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Pair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Extracteur.java" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/Home.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java" />
       </list>
     </option>
   </component>
@@ -277,12 +281,12 @@
       <workItem from="1554537632859" duration="16949000" />
       <workItem from="1554572668937" duration="7021000" />
       <workItem from="1554589448346" duration="1724000" />
-      <workItem from="1554622118054" duration="5328000" />
+      <workItem from="1554622118054" duration="5712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31022000" />
+    <option name="totallyTimeSpent" value="31406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -299,10 +303,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18699187" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18834688" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18834688" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989899" visible="true" weight="0.16966581" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989899" visible="true" weight="0.16966581" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info id="Learn" order="2" />
@@ -564,21 +568,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="-255">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#629#646#0" expanded="true" />
             <element signature="e#3493#3503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileManagement/CSVToTransConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#649#666#0" expanded="true" />
+            <element signature="e#1450#1467#0" expanded="true" />
           </folding>
         </state>
       </provider>

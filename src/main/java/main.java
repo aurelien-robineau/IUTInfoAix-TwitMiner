@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class main extends Application {
 
-    public static HashMap<String, Integer> knownWords = new HashMap<String, Integer>();
+    public static HashMap<Integer, String> numberToWord = new HashMap<Integer, String>();
     private static final int    MAX_QUERIES	     = 100;
     private static final int    TWEETS_PER_QUERY = 100;
     private static final String SEARCH_TERM      = "Esport";
@@ -58,7 +58,7 @@ public class main extends Application {
 
         System.out.println("/!\\ Creating trans file ...");
         CSVToTransConverter csvToTransConverter = new CSVToTransConverter();
-        knownWords = csvToTransConverter.convertToTrans(storingFile);
+        numberToWords = csvToTransConverter.convertToTrans(storingFile);
         System.out.println("/!\\ trans file created !");
         */
 /*

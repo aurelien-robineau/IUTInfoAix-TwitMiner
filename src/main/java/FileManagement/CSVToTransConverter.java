@@ -3,15 +3,17 @@ package FileManagement;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CSVToTransConverter {
 
     /**
      * Convert a .csv file into a .trans file.
      * @param csvFilePath Path of the csv file to convert
-     * @return Converted file
+     * @param transFilePath Path of the trans file to print
+     * @return Association of numbers and there word
      */
-    public  HashMap<String, Integer> convertToTrans(String csvFilePath, String whereToPrint) {
+    public  HashMap<Integer, String> convertToTrans(String csvFilePath, String transFilePath) {
         CSVReader reader = new CSVReader(";");
         ArrayList<String[]> splitCSV = reader.splitCSV(csvFilePath);
 
@@ -36,8 +38,14 @@ public class CSVToTransConverter {
         }
 
 
-        printTrans(splitTransToString(splitTrans), whereToPrint);
-        return knownWords;
+        printTrans(splitTransToString(splitTrans), transFilePath);
+
+        HashMap<Integer, String> numbersToWords = new HashMap<Integer, String>();
+        for(Map.Entry<String, Integer> entry : knownWords.entrySet()){
+            numbersToWords.put(entry.getValue(), entry.getKey());
+        }
+
+        return numbersToWords;
     } // convertToTrans ()
 
     /**
