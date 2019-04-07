@@ -12,7 +12,7 @@ public class OutToCSVConverter {
      * Convert a .out file into a .csv file.
      * @return .csv file
      */
-    public String convertToCSV(String filePath) {
+    public static String convertToCSV(String filePath) {
         ArrayList<String> lines = new ArrayList<String>();
         String line = "";
 
@@ -34,7 +34,7 @@ public class OutToCSVConverter {
         return linesToString(lines);
     } // convertToCSV ()
 
-    private String linesToString(ArrayList<String> lines) {
+    private static String linesToString(ArrayList<String> lines) {
         StringBuilder fileStr = new StringBuilder();
         for (String line: lines) {
             fileStr.append(line);
@@ -43,4 +43,6 @@ public class OutToCSVConverter {
 
         return fileStr.toString();
     } // linesToString ()
+
+
 }

@@ -1,5 +1,6 @@
 package DataProcessing;
 
+import FileManagement.OutToCSVConverter;
 import Main.Pair;
 import Main.main;
 import com.google.common.collect.Lists;
@@ -39,7 +40,7 @@ public class Extracteur {
     private Extracteur() {}
 
     // singleton getter
-    public static   Extracteur getInstance(){
+    public static Extracteur getInstance(){
         if(instance == null){
             instance = new Extracteur();
         }
@@ -84,25 +85,28 @@ public class Extracteur {
         // creating rules
         for(Map.Entry<ArrayList<Integer>,Float> entry : freqPattern.entrySet()) {
             //if there can't be any subunit it's not interresting
-            if (entry.getKey().size() < 1 || entry.getValue() < minfreq ) continue;
+            if (entry.getKey().size() < 2 || entry.getValue() < minfreq ) continue;
 
             //we search patterns for interresting rules
             for (ArrayList<Integer> combination : combinationFinder(entry.getKey())) {
                 try{
+
                     Float conf = entry.getValue()/freqPattern.get(combination);
                     if(conf >=minConf ){
                         Float lift = conf / entry.getValue();
                         if(lift >= minLift){
                             //pattern Y
-                            String[] y = new String[entry.getKey().size()];
+                            ArrayList<String> y = new ArrayList<String>();
                             for(int i = 0; i<entry.getKey().size(); ++i){
-                                y[i] = main.numberToWords.get(entry.getKey().get(i));
+                                y.add(i, main.numberToWords.get(entry.getKey().get(i)) );
                             }
 
                             //pattern x
-                            String[] x = new String[combination.size()];
-                            for(int i = 0; i<entry.getKey().size(); ++i){
-                                x[i] = main.numberToWords.get(combination.get(i));
+                            ArrayList<String> x = new ArrayList<String>();
+                            for(int i = 0; i< combination.size(); ++i){
+                                System.out.println(combination.get(i));
+
+                                x.add(i,main.numberToWords.get(combination.get(i)));
                             }
 
                             patternConfLift.put(new Pair(y, x), new Pair(conf,lift));
@@ -164,15 +168,34 @@ public class Extracteur {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append("patternConfLift :");
-        s.append(patternConfLift);
-        s.append("\n\n freqPatterns :");
-        s.append(freqPattern);
-        s.append("\n\nmin conf :");
-        s.append(minConf);
+
+        for(Map.Entry<Pair, Pair> entry : patternConfLift.entrySet() ) {
+            s.append(entry.getKey().getFirst().toString() );
+            s.append("-->");
+            s.append(entry.getKey().getSecond().toString() );
+            s.append(" confiance : ");
+            s.append(entry.getValue().getFirst());
+            s.append(" Lift : ");
+            s.append(entry.getValue().getSecond());
+            s.append('\n');
+
+
+        }
 
         return s.toString();
     } // toString ()
+
+    public static void printToFile(String filename){
+        try{
+            FileWriter writer = new FileWriter(filename);
+            writer.write(instance.toString());
+        }catch(Exception e ){
+            e.printStackTrace();
+        }
+
+
+
+    }
 
 
 }
