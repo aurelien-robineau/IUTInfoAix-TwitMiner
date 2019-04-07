@@ -6,10 +6,7 @@ import Main.main;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Extracteur {
     // properties
@@ -104,7 +101,6 @@ public class Extracteur {
                             //pattern x
                             ArrayList<String> x = new ArrayList<String>();
                             for(int i = 0; i< combination.size(); ++i){
-                                System.out.println(combination.get(i));
 
                                 x.add(i,main.numberToWords.get(combination.get(i)));
                             }
@@ -176,18 +172,31 @@ public class Extracteur {
 
             try{
 
-                ArrayList<String> x;
-                x = (ArrayList<String>) entry.getKey().getSecond();
+                ArrayList<String> x = (ArrayList<String>) entry.getKey().getSecond();
+                ArrayList<String> y = (ArrayList<String>) entry.getKey().getFirst();
+
 
                 s.append(x.toString() );
                 s.append("-->");
 
-                String yMinusX = entry.getKey().getFirst().toString();
+                ArrayList<String> yMinusX = y;
+                ArrayList<String> toRemove = new ArrayList<String>();
+                for( String unit : y){
+                    Iterator<String> sIterator = x.iterator();
 
-                for( String unit : x){
-                    yMinusX= yMinusX.replace(unit,"");
+                    for(;sIterator.hasNext();){
+                       if(unit.equals(sIterator.next())){
+                            toRemove.add(unit);
+                       }
+                   }
                 }
-                s.append(entry.getKey().getFirst().toString() );
+                for(String removeMe : toRemove){
+                    yMinusX.remove(removeMe);
+                                    }
+
+
+
+                s.append(yMinusX);
                 s.append(" confiance : ");
                 s.append(entry.getValue().getFirst());
                 s.append(" Lift : ");
