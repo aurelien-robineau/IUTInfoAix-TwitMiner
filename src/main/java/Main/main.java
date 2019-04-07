@@ -5,6 +5,7 @@ import DataProcessing.Apriori;
 import DataProcessing.Extracteur;
 import FileManagement.CSVReader;
 import FileManagement.CSVToTransConverter;
+import FileManagement.OutToCSVConverter;
 import GUI.HomeController;
 import com.opencsv.CSVWriter;
 import javafx.application.Application;
@@ -26,6 +27,9 @@ public class main extends Application {
     public static final String transFilePath    = "./src/main/resources/trans/";
     public static final String csvFilePath      = "./src/main/resources/CSV/";
     public static final String aprioriFilePath  = "src/main/resources/aprioriOut/";
+    public static final String outCSV  = "src/main/resources/outCSV/";
+    public static final String patternFile = "src/main/resources/patterns/";
+
 
     private static int   numberOfTweets =0;
     private static int   MAX_QUERIES;
@@ -62,7 +66,29 @@ public class main extends Application {
 
         System.out.println("/!\\ Run apriori ...");
         main.runApriori();
+
+        System.out.println("/!\\ out -> csv ...");
+        try{
+            FileWriter writer = new FileWriter(outCSV+SEARCH_TERM);
+            writer.append( OutToCSVConverter.convertToCSV("src/main/resources/aprioriOut/"+SEARCH_TERM+".out") );
+            writer.close();
+        }catch (IOException e ){
+            e.printStackTrace();
+        }
+
     } // mine ()
+
+
+
+
+    public static void processData(){
+        if(numberToWords == null){
+            unserializeNumberToWords();
+        }
+        getData();
+        Extracteur.printToFile(patternFile+SEARCH_TERM+".txt");
+
+    }//processData
 
     private static void initializeParams(String searchTerm, int numberOfTweetsMax) {
         SEARCH_TERM = searchTerm;
@@ -191,7 +217,7 @@ public class main extends Application {
                 transFilePath + SEARCH_TERM +".trans");
         try{
             FileOutputStream fos =
-                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords.ser");
+                    new FileOutputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(numberToWords);
             oos.close();
@@ -204,18 +230,18 @@ public class main extends Application {
 
     public static void unserializeNumberToWords(){
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "_numberToWords.ser");
+            FileInputStream fis = new FileInputStream("src/main/resources/serialized/" + SEARCH_TERM + "numberToWords");
             ObjectInputStream ois = new ObjectInputStream(fis);
             numberToWords = (HashMap) ois.readObject();
             ois.close();
             fis.close();
-        } catch(IOException ioe) {
+        }catch(IOException ioe) {
             ioe.printStackTrace();
-        } catch(ClassNotFoundException c) {
+        }catch(ClassNotFoundException c) {
             System.out.println("Class not found");
             c.printStackTrace();
         }
-    } // unserializeNumberToWords ()
+    }
 
     private static void runApriori() {
         try {
